@@ -4,70 +4,56 @@
         <loc>None./</loc>
         <lastmod>2024-05-21</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="None"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="None"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/"/>
     </url>
     <url>
         <loc>Noneblog/</loc>
         <lastmod>2024-05-21</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneblog/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/blog/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="Noneblog/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/blog/"/>
     </url>
     <url>
         <loc>Nonehardware/%E5%9F%BA%E7%A1%80/</loc>
         <lastmod>2024-05-21</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Nonehardware/%E5%9F%BA%E7%A1%80/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/hardware/%E5%9F%BA%E7%A1%80/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="Nonehardware/%E5%9F%BA%E7%A1%80/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/hardware/%E5%9F%BA%E7%A1%80/"/>
     </url>
     <url>
         <loc>Nonehome/about/</loc>
         <lastmod>2024-05-21</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Nonehome/about/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/home/about/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="Nonehome/about/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/home/about/"/>
     </url>
     <url>
-        <loc>Nonehome/sponsorship/</loc>
+        <loc>Noneen/</loc>
         <lastmod>2024-05-21</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="Nonehome/sponsorship/"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/home/sponsorship/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="None"/>
     </url>
     <url>
-        <loc>Nonezh/</loc>
+        <loc>Noneen/blog/</loc>
         <lastmod>2024-05-21</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="None"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/blog/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="Noneblog/"/>
     </url>
     <url>
-        <loc>Nonezh/blog/</loc>
+        <loc>Noneen/hardware/%E5%9F%BA%E7%A1%80/</loc>
         <lastmod>2024-05-21</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/blog/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Noneblog/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/hardware/%E5%9F%BA%E7%A1%80/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="Nonehardware/%E5%9F%BA%E7%A1%80/"/>
     </url>
     <url>
-        <loc>Nonezh/hardware/%E5%9F%BA%E7%A1%80/</loc>
+        <loc>Noneen/home/about/</loc>
         <lastmod>2024-05-21</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/hardware/%E5%9F%BA%E7%A1%80/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Nonehardware/%E5%9F%BA%E7%A1%80/"/>
-    </url>
-    <url>
-        <loc>Nonezh/home/about/</loc>
-        <lastmod>2024-05-21</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/home/about/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Nonehome/about/"/>
-    </url>
-    <url>
-        <loc>Nonezh/home/sponsorship/</loc>
-        <lastmod>2024-05-21</lastmod>
-        <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/home/sponsorship/"/>
-        <xhtml:link rel="alternate" hreflang="en" href="Nonehome/sponsorship/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/home/about/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="Nonehome/about/"/>
     </url>
 </urlset>
