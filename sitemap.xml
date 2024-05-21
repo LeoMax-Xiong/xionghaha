@@ -1,3 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+        <loc>None./</loc>
+        <lastmod>2024-05-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="None"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/"/>
+    </url>
+    <url>
+        <loc>Noneblog/</loc>
+        <lastmod>2024-05-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneblog/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/blog/"/>
+    </url>
+    <url>
+        <loc>Nonehardware/%E5%9F%BA%E7%A1%80/</loc>
+        <lastmod>2024-05-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonehardware/%E5%9F%BA%E7%A1%80/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/hardware/%E5%9F%BA%E7%A1%80/"/>
+    </url>
+    <url>
+        <loc>Nonehome/about/</loc>
+        <lastmod>2024-05-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonehome/about/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/home/about/"/>
+    </url>
+    <url>
+        <loc>Nonehome/sponsorship/</loc>
+        <lastmod>2024-05-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonehome/sponsorship/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/home/sponsorship/"/>
+    </url>
+    <url>
+        <loc>Nonezh/</loc>
+        <lastmod>2024-05-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="None"/>
+    </url>
+    <url>
+        <loc>Nonezh/blog/</loc>
+        <lastmod>2024-05-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/blog/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneblog/"/>
+    </url>
+    <url>
+        <loc>Nonezh/hardware/%E5%9F%BA%E7%A1%80/</loc>
+        <lastmod>2024-05-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/hardware/%E5%9F%BA%E7%A1%80/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonehardware/%E5%9F%BA%E7%A1%80/"/>
+    </url>
+    <url>
+        <loc>Nonezh/home/about/</loc>
+        <lastmod>2024-05-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/home/about/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonehome/about/"/>
+    </url>
+    <url>
+        <loc>Nonezh/home/sponsorship/</loc>
+        <lastmod>2024-05-21</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="Nonezh/home/sponsorship/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Nonehome/sponsorship/"/>
+    </url>
 </urlset>
