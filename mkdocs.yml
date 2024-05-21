@@ -66,9 +66,14 @@ plugins:
             about: 关于
             hardware: 硬件
             basic: 基础
+            todo: 待办
+  - open-in-new-tab
+  - search
 nav:
   - home:
     - "index.md"
     - about: "./home/about.md"
   - hardware:
     - basic: "./hardware/基础.md"
+  - todo:
+    - todo: "./todo/todo.md"
