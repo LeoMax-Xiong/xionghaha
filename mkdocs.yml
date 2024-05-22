@@ -69,6 +69,7 @@ plugins:
             todo: 待办
   - open-in-new-tab
   - search
+  - autolinks 
 nav:
   - home:
     - "index.md"

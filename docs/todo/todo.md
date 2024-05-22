@@ -36,3 +36,13 @@
 33. https://zhuanlan.zhihu.com/p/649731916
 34. https://blog.csdn.net/u010159842/article/details/78959515
 35. https://www.bilibili.com/video/BV1AW4y1F7EK/?p=2&spm_id_from=pageDriver&vd_source=5d036d17b16d6367c25a00641a169e1f
+36. https://www.bilibili.com/video/BV17g4y1g7S6/?spm_id_from=333.788&vd_source=5d036d17b16d6367c25a00641a169e1f
+37. https://search.bilibili.com/all?keyword=qlora%E8%AE%AD%E7%BB%83&from_source=webtop_search&spm_id_from=333.1007&search_source=5
+38. https://www.bilibili.com/video/BV1Hb421b72f/?spm_id_from=333.1007.tianma.1-2-2.click&vd_source=5d036d17b16d6367c25a00641a169e1f
+39. https://juejin.cn/post/7350510977052229668
+40. https://huggingface.co/learn/nlp-course/zh-CN/chapter6/3
+41. https://www.huaxiaozhuan.com/%E5%B7%A5%E5%85%B7/huggingface_transformer/chapters/1_tokenizer.html
+42. https://huggingface.co/docs/transformers/main/zh/main_classes/tokenizer
+43. https://tvm.hyper.ai/docs/arch/arch/pass_infra/
+44. https://tvm.hyper.ai/docs/
+45. 
