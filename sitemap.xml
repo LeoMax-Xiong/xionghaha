@@ -36,6 +36,13 @@
         <xhtml:link rel="alternate" hreflang="en" href="Noneen/mkdocs/latex/"/>
     </url>
     <url>
+        <loc>Noneonnx/introduction/</loc>
+        <lastmod>2024-05-22</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="Noneonnx/introduction/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/onnx/introduction/"/>
+    </url>
+    <url>
         <loc>Nonetodo/todo/</loc>
         <lastmod>2024-05-22</lastmod>
         <changefreq>daily</changefreq>
@@ -76,6 +83,13 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="Noneen/mkdocs/latex/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="Nonemkdocs/latex/"/>
+    </url>
+    <url>
+        <loc>Noneen/onnx/introduction/</loc>
+        <lastmod>2024-05-22</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/onnx/introduction/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="Noneonnx/introduction/"/>
     </url>
     <url>
         <loc>Noneen/todo/todo/</loc>
