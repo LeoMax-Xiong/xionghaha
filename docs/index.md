@@ -1,17 +1,11 @@
-# Welcome to MkDocs
+# 欢迎来到XiongHaHa鱼塘
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 
-## Commands
+## 关于本站
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+本网站作为我个人学习、研究整理的地方
 
-## Project layout
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+## 评论&疑惑
+
+大家可以在github上提issue，或者通过邮件直接联系我
