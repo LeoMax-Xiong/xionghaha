@@ -67,6 +67,8 @@ plugins:
             hardware: 硬件
             basic: 基础
             introduction: 介绍
+            datasets: 数据集
+            tod: 任务式对话
             todo: 待办
   - open-in-new-tab
   - search
@@ -75,8 +77,12 @@ nav:
   - home:
     - "index.md"
     - about: "./home/about.md"
+  - datasets:
+    - tod: "./datasets/tod.md"
   - hardware:
     - basic: "./hardware/基础.md"
+  - tokenizer:
+    - introduction: "./tokenizer/introduction.md"
   - onnx:
     - introduction: "./onnx/introduction.md"
   - todo:
