@@ -70,6 +70,7 @@ plugins:
             datasets: 数据集
             tod: 任务式对话
             todo: 待办
+            rewrite: 多轮改写
   - open-in-new-tab
   - search
   - autolinks 
@@ -83,6 +84,8 @@ nav:
     - basic: "./hardware/基础.md"
   - tokenizer:
     - introduction: "./tokenizer/introduction.md"
+  - rewrite:
+    - introduction: "./rewrite/introduction.md"
   - onnx:
     - introduction: "./onnx/introduction.md"
   - todo:
