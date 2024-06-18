@@ -1168,10 +1168,12 @@
 <div class="arithmatex">\[
 (H, U_{n} \rightarrow R), H=\{U_{1}, U_{2}, U_{3}, \cdots, U_{n-1}\}
 \]</div>
-<p>其中： 
-* <span class="arithmatex">\(U_{n}\)</span> 表示在时间 <span class="arithmatex">\(n\)</span> 时刻的对话文本，属于 NSUs 的输入；
-* <span class="arithmatex">\(H\)</span> 表示在时间 <span class="arithmatex">\(n\)</span> 之前的会话历史，一共 <span class="arithmatex">\(n-1\)</span> 轮对话；
-* <span class="arithmatex">\(R\)</span> 表示 <span class="arithmatex">\(U_{n}\)</span> 经过改写之后得到的文本。</p>
+<p>其中： </p>
+<ul>
+<li><span class="arithmatex">\(U_{n}\)</span> 表示在时间 <span class="arithmatex">\(n\)</span> 时刻的对话文本，属于 NSUs 的输入；</li>
+<li><span class="arithmatex">\(H\)</span> 表示在时间 <span class="arithmatex">\(n\)</span> 之前的会话历史，一共 <span class="arithmatex">\(n-1\)</span> 轮对话；</li>
+<li><span class="arithmatex">\(R\)</span> 表示 <span class="arithmatex">\(U_{n}\)</span> 经过改写之后得到的文本。</li>
+</ul>
 <p>为了保证能为自然语言理解模块提供完整的信息输入，要求改写得到的 <span class="arithmatex">\(R\)</span> 具备完整的对话历史信息，同事需要保证 <span class="arithmatex">\(R\)</span> 的流程性和合理性。</p>
 <p>改写任务的目标是学习得到的模型 <span class="arithmatex">\(P(R | (H, U_{n}))\)</span>，能够判断是否需要改写，如果需要，则返回噶写后的文本序列。</p>
 
