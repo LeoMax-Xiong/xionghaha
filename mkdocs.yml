@@ -71,6 +71,7 @@ plugins:
             tod: 任务式对话
             todo: 待办
             rewrite: 多轮改写
+            utf8-unicode: 字符编码
   - open-in-new-tab
   - search
   - autolinks 
@@ -83,6 +84,7 @@ nav:
   - hardware:
     - basic: "./hardware/基础.md"
   - tokenizer:
+    - utf8-unicode: "./tokenizer/utf8_unicode.md"
     - introduction: "./tokenizer/introduction.md"
   - rewrite:
     - introduction: "./rewrite/introduction.md"
