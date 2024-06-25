@@ -72,6 +72,8 @@ plugins:
             todo: 待办
             rewrite: 多轮改写
             utf8-unicode: 字符编码
+            inference: 模型推理
+
   - open-in-new-tab
   - search
   - autolinks 
@@ -90,6 +92,8 @@ nav:
     - introduction: "./rewrite/introduction.md"
   - onnx:
     - introduction: "./onnx/introduction.md"
+  - inference:
+    - introduction: "./inference/introduction.md"
   - todo:
     - todo: "./todo/todo.md"
 
