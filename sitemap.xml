@@ -2,182 +2,196 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
         <loc>None./</loc>
-        <lastmod>2024-06-26</lastmod>
+        <lastmod>2024-08-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="None"/>
         <xhtml:link rel="alternate" hreflang="en" href="Noneen/"/>
     </url>
     <url>
         <loc>Noneblog/</loc>
-        <lastmod>2024-06-26</lastmod>
+        <lastmod>2024-08-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="Noneblog/"/>
         <xhtml:link rel="alternate" hreflang="en" href="Noneen/blog/"/>
     </url>
     <url>
         <loc>Nonedatasets/tod/</loc>
-        <lastmod>2024-06-26</lastmod>
+        <lastmod>2024-08-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="Nonedatasets/tod/"/>
         <xhtml:link rel="alternate" hreflang="en" href="Noneen/datasets/tod/"/>
     </url>
     <url>
         <loc>Nonehardware/%E5%9F%BA%E7%A1%80/</loc>
-        <lastmod>2024-06-26</lastmod>
+        <lastmod>2024-08-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="Nonehardware/%E5%9F%BA%E7%A1%80/"/>
         <xhtml:link rel="alternate" hreflang="en" href="Noneen/hardware/%E5%9F%BA%E7%A1%80/"/>
     </url>
     <url>
         <loc>Nonehome/about/</loc>
-        <lastmod>2024-06-26</lastmod>
+        <lastmod>2024-08-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="Nonehome/about/"/>
         <xhtml:link rel="alternate" hreflang="en" href="Noneen/home/about/"/>
     </url>
     <url>
         <loc>Noneinference/introduction/</loc>
-        <lastmod>2024-06-26</lastmod>
+        <lastmod>2024-08-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="Noneinference/introduction/"/>
         <xhtml:link rel="alternate" hreflang="en" href="Noneen/inference/introduction/"/>
     </url>
     <url>
         <loc>Nonemkdocs/latex/</loc>
-        <lastmod>2024-06-26</lastmod>
+        <lastmod>2024-08-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="Nonemkdocs/latex/"/>
         <xhtml:link rel="alternate" hreflang="en" href="Noneen/mkdocs/latex/"/>
     </url>
     <url>
         <loc>Noneonnx/introduction/</loc>
-        <lastmod>2024-06-26</lastmod>
+        <lastmod>2024-08-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="Noneonnx/introduction/"/>
         <xhtml:link rel="alternate" hreflang="en" href="Noneen/onnx/introduction/"/>
     </url>
     <url>
         <loc>Nonerewrite/introduction/</loc>
-        <lastmod>2024-06-26</lastmod>
+        <lastmod>2024-08-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="Nonerewrite/introduction/"/>
         <xhtml:link rel="alternate" hreflang="en" href="Noneen/rewrite/introduction/"/>
     </url>
     <url>
         <loc>Nonetodo/todo/</loc>
-        <lastmod>2024-06-26</lastmod>
+        <lastmod>2024-08-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="Nonetodo/todo/"/>
         <xhtml:link rel="alternate" hreflang="en" href="Noneen/todo/todo/"/>
     </url>
     <url>
         <loc>Nonetokenizer/introduction/</loc>
-        <lastmod>2024-06-26</lastmod>
+        <lastmod>2024-08-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="Nonetokenizer/introduction/"/>
         <xhtml:link rel="alternate" hreflang="en" href="Noneen/tokenizer/introduction/"/>
     </url>
     <url>
+        <loc>Nonetokenizer/tokenizer%E5%85%A5%E9%97%A8/</loc>
+        <lastmod>2024-08-07</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="Nonetokenizer/tokenizer%E5%85%A5%E9%97%A8/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/tokenizer/tokenizer%E5%85%A5%E9%97%A8/"/>
+    </url>
+    <url>
         <loc>Nonetokenizer/tokenizer%E5%AE%9E%E7%8E%B0/</loc>
-        <lastmod>2024-06-26</lastmod>
+        <lastmod>2024-08-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="Nonetokenizer/tokenizer%E5%AE%9E%E7%8E%B0/"/>
         <xhtml:link rel="alternate" hreflang="en" href="Noneen/tokenizer/tokenizer%E5%AE%9E%E7%8E%B0/"/>
     </url>
     <url>
         <loc>Nonetokenizer/utf8_unicode/</loc>
-        <lastmod>2024-06-26</lastmod>
+        <lastmod>2024-08-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="Nonetokenizer/utf8_unicode/"/>
         <xhtml:link rel="alternate" hreflang="en" href="Noneen/tokenizer/utf8_unicode/"/>
     </url>
     <url>
         <loc>Noneen/</loc>
-        <lastmod>2024-06-26</lastmod>
+        <lastmod>2024-08-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="Noneen/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="None"/>
     </url>
     <url>
         <loc>Noneen/blog/</loc>
-        <lastmod>2024-06-26</lastmod>
+        <lastmod>2024-08-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="Noneen/blog/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="Noneblog/"/>
     </url>
     <url>
         <loc>Noneen/datasets/tod/</loc>
-        <lastmod>2024-06-26</lastmod>
+        <lastmod>2024-08-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="Noneen/datasets/tod/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="Nonedatasets/tod/"/>
     </url>
     <url>
         <loc>Noneen/hardware/%E5%9F%BA%E7%A1%80/</loc>
-        <lastmod>2024-06-26</lastmod>
+        <lastmod>2024-08-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="Noneen/hardware/%E5%9F%BA%E7%A1%80/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="Nonehardware/%E5%9F%BA%E7%A1%80/"/>
     </url>
     <url>
         <loc>Noneen/home/about/</loc>
-        <lastmod>2024-06-26</lastmod>
+        <lastmod>2024-08-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="Noneen/home/about/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="Nonehome/about/"/>
     </url>
     <url>
         <loc>Noneen/inference/introduction/</loc>
-        <lastmod>2024-06-26</lastmod>
+        <lastmod>2024-08-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="Noneen/inference/introduction/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="Noneinference/introduction/"/>
     </url>
     <url>
         <loc>Noneen/mkdocs/latex/</loc>
-        <lastmod>2024-06-26</lastmod>
+        <lastmod>2024-08-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="Noneen/mkdocs/latex/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="Nonemkdocs/latex/"/>
     </url>
     <url>
         <loc>Noneen/onnx/introduction/</loc>
-        <lastmod>2024-06-26</lastmod>
+        <lastmod>2024-08-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="Noneen/onnx/introduction/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="Noneonnx/introduction/"/>
     </url>
     <url>
         <loc>Noneen/rewrite/introduction/</loc>
-        <lastmod>2024-06-26</lastmod>
+        <lastmod>2024-08-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="Noneen/rewrite/introduction/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="Nonerewrite/introduction/"/>
     </url>
     <url>
         <loc>Noneen/todo/todo/</loc>
-        <lastmod>2024-06-26</lastmod>
+        <lastmod>2024-08-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="Noneen/todo/todo/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="Nonetodo/todo/"/>
     </url>
     <url>
         <loc>Noneen/tokenizer/introduction/</loc>
-        <lastmod>2024-06-26</lastmod>
+        <lastmod>2024-08-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="Noneen/tokenizer/introduction/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="Nonetokenizer/introduction/"/>
     </url>
     <url>
+        <loc>Noneen/tokenizer/tokenizer%E5%85%A5%E9%97%A8/</loc>
+        <lastmod>2024-08-07</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/tokenizer/tokenizer%E5%85%A5%E9%97%A8/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="Nonetokenizer/tokenizer%E5%85%A5%E9%97%A8/"/>
+    </url>
+    <url>
         <loc>Noneen/tokenizer/tokenizer%E5%AE%9E%E7%8E%B0/</loc>
-        <lastmod>2024-06-26</lastmod>
+        <lastmod>2024-08-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="Noneen/tokenizer/tokenizer%E5%AE%9E%E7%8E%B0/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="Nonetokenizer/tokenizer%E5%AE%9E%E7%8E%B0/"/>
     </url>
     <url>
         <loc>Noneen/tokenizer/utf8_unicode/</loc>
-        <lastmod>2024-06-26</lastmod>
+        <lastmod>2024-08-07</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="Noneen/tokenizer/utf8_unicode/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="Nonetokenizer/utf8_unicode/"/>
