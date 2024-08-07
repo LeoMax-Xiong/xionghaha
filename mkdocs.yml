@@ -73,6 +73,7 @@ plugins:
             rewrite: 多轮改写
             utf8-unicode: 字符编码
             inference: 模型推理
+            implemetion: 实现
 
   - open-in-new-tab
   - search
@@ -86,8 +87,10 @@ nav:
   - hardware:
     - basic: "./hardware/基础.md"
   - tokenizer:
+    - 引言: "./tokenizer/tokenizer入门.md"
     - utf8-unicode: "./tokenizer/utf8_unicode.md"
     - introduction: "./tokenizer/introduction.md"
+    - implemetion: "./tokenizer/tokenizer实现.md"
   - rewrite:
     - introduction: "./rewrite/introduction.md"
   - onnx:
