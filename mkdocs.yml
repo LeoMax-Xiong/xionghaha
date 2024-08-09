@@ -22,7 +22,7 @@ theme:
     - navigation.instant.progress # 进度条
     - navigation.path # 导航路径， 目前好像没啥用
     # - navigation.prune # 只构建可见的页面
-    - navigation.sections # 导航栏的section
+    # - navigation.sections # 导航栏的section
     - navigation.tabs # 顶级索引被作为tab
     - navigation.tabs.sticky # tab始终可见
     - navigation.top # 开启顶部导航栏
@@ -74,14 +74,21 @@ plugins:
             utf8-unicode: 字符编码
             inference: 模型推理
             implemetion: 实现
+            speech_and_language_processing: 语音与语言处理
 
   - open-in-new-tab
   - search
   - autolinks 
+
 nav:
   - home:
     - "index.md"
     - about: "./home/about.md"
+  - Getting started:
+    - tutorials:
+      - blog/index.md
+      - blogs:
+        - "基础": blog/blogs/basic.md
   - datasets:
     - tod: "./datasets/tod.md"
   - hardware:
@@ -97,6 +104,11 @@ nav:
     - introduction: "./onnx/introduction.md"
   - inference:
     - introduction: "./inference/introduction.md"
+  - speech_and_language_processing:
+    - regular_expression_text_normalization_and_edit_distance: 
+      - jsgf: "./speech_and_language_processing/jsgf/jsgf.md"
+      # - blogs:
+      #   - "基础": blog/blogs/basic.md
   - todo:
     - todo: "./todo/todo.md"
 
