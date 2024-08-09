@@ -1,0 +1,2559 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="xionghaha">
+      
+      
+      
+        <link rel="prev" href="../../../inference/introduction/">
+      
+      
+        <link rel="next" href="../../../todo/todo/">
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.24">
+    
+    
+      
+        <title>jsgf - Xionghaha</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.6543a935.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#jsgfjspeech-gramar-format" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../" title="Xionghaha" class="md-header__button md-logo" aria-label="Xionghaha" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Xionghaha
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              jsgf
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_2">
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.52 17.52 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11.76-2.04M18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2l-4.5-12m-2.62 7 1.62-4.33L19.12 17h-3.24Z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../../../speech_and_language_processing/jsgf/jsgf/" hreflang="zh" class="md-select__link">
+              简体中文
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/Honei/xionghaha" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../" class="md-tabs__link">
+          
+  
+    
+  
+  home
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../blog/" class="md-tabs__link">
+          
+  
+    
+  
+  Getting started
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../datasets/tod/" class="md-tabs__link">
+          
+  
+    
+  
+  datasets
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../hardware/%E5%9F%BA%E7%A1%80/" class="md-tabs__link">
+          
+  
+    
+  
+  hardware
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../tokenizer/tokenizer%E5%85%A5%E9%97%A8/" class="md-tabs__link">
+          
+  
+    
+  
+  tokenizer
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../rewrite/introduction/" class="md-tabs__link">
+          
+  
+    
+  
+  rewrite
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../onnx/introduction/" class="md-tabs__link">
+          
+  
+    
+  
+  onnx
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../inference/introduction/" class="md-tabs__link">
+          
+  
+    
+  
+  inference
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+    
+  
+  speech_and_language_processing
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../todo/todo/" class="md-tabs__link">
+          
+  
+    
+  
+  todo
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../" title="Xionghaha" class="md-nav__button md-logo" aria-label="Xionghaha" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Xionghaha
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/Honei/xionghaha" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    home
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_1" id="__nav_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            home
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../home/about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    about
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Getting started
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Getting started
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../blog/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    tutorials
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            tutorials
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1_2" id="__nav_2_1_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    blogs
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            blogs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../blog/blogs/basic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    基础
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    datasets
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            datasets
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../datasets/tod/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    tod
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    hardware
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            hardware
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../hardware/%E5%9F%BA%E7%A1%80/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    basic
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    tokenizer
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            tokenizer
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tokenizer/tokenizer%E5%85%A5%E9%97%A8/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    引言
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tokenizer/utf8_unicode/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    utf8-unicode
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tokenizer/introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../tokenizer/tokenizer%E5%AE%9E%E7%8E%B0/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    implemetion
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    rewrite
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            rewrite
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../rewrite/introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    onnx
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            onnx
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../onnx/introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    inference
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            inference
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../inference/introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    speech_and_language_processing
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            speech_and_language_processing
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_9_1" id="__nav_9_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    regular_expression_text_normalization_and_edit_distance
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_9_1">
+            <span class="md-nav__icon md-icon"></span>
+            regular_expression_text_normalization_and_edit_distance
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    jsgf
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    jsgf
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      背景
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      摘要
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      本文档的状态
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      内容
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="内容">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      前言
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="前言">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      范围
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      贡献
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jspeech" class="md-nav__link">
+    <span class="md-ellipsis">
+      JSpeech语法格式规范
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="JSpeech语法格式规范">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 简介
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. 简介">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 相关文档
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 定义
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 定义">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 语法名称和包名称
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 规则名称
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2 规则名称">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#221" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.1 限定名称和完全限定名称
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    todo
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            todo
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../todo/todo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    todo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      背景
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      摘要
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      本文档的状态
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      内容
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="内容">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      前言
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="前言">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      范围
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      贡献
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jspeech" class="md-nav__link">
+    <span class="md-ellipsis">
+      JSpeech语法格式规范
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="JSpeech语法格式规范">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. 简介
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. 简介">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 相关文档
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. 定义
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 定义">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 语法名称和包名称
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 规则名称
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2 规则名称">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#221" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.1 限定名称和完全限定名称
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/Honei/xionghaha/edit/master/docs/speech_and_language_processing/jsgf/jsgf.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/Honei/xionghaha/raw/master/docs/speech_and_language_processing/jsgf/jsgf.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>
+    </a>
+  
+
+
+<h1 id="jsgfjspeech-gramar-format">JSGF(JSpeech Gramar Format)文法格式</h1>
+<p>Jsgf 是一种文法格式，用于描述语音识别器应该听什么。这个格式是sun公司给w3c提交的java语音识别命令解析标准。</p>
+<p>!!! success 注意
+    下面的内容是对w3c中jsgf文档的翻译。</p>
+<h2 id="_1">背景</h2>
+<ul>
+<li>最后的提交日期：W3C 说明 2000 年 6 月 5 日</li>
+<li>最后提交的此版本：http://www.w3.org/TR/2000/NOTE-jsgf-20000605</li>
+<li>最新版本：http://www.w3.org/TR/jsgf</li>
+<li>作者：Andrew Hunt，Speech Works International &lt; andrew.hunt@speechworks.com &gt;</li>
+</ul>
+<blockquote>
+<p>版权所有 ©2000 Sun Microsystems, Inc.
+Sun、Sun Microsystems, Inc.、Java 和所有基于 Java 的标记和徽标是 Sun Microsystems, Inc. 在美国和其他国家/地区的商标或注册商标。</p>
+</blockquote>
+<h2 id="_2">摘要</h2>
+<p>JSpeech 文法格式 (JSGF) 是一种平台无关、技术提供者无关的文法文本表示，用于语音识别。语音识别模块使用文法来确定语音识别模块应该听什么，从而描述用户可能说的文本内容。除了使用传统的语法符号外， JSGF 还采用了 Java <sup>TM</sup> 编程语言的风格和习惯。</p>
+<p>本文档源自 Java <sup>TM</sup> Speech API Grammar Format（版本 1.0，1998 年 10 月），可从 Sun Microsystems 的网站获取： http://java.sun.com/products/java-media/speech/。</p>
+<p>Sun Microsystems 希望将本文档提交给 W3C 语音浏览器工作组，以便制定语音技术的互联网标准。我们期望由此产生的 W3C 建议对开发者社区具有重要意义。</p>
+<p>有关知识产权的声明请参阅 <a href="https://www.w3.org/submissions/2000/06/">Sun提交的文件</a>。</p>
+<h2 id="_3">本文档的状态</h2>
+<p>本文档是 Sun Microsystems, Inc. 向万维网联盟提交的一份文件（请参阅提交请求、W3C 工作人员意见）。所有已确认提交文件的列表，请参阅<a href="https://www.w3.org/submissions/">已确认提交给 W3C 的文件</a>。</p>
+<p>本文档是 W3C 提供的一份注释，仅供讨论。这项工作并不意味着 W3C 成员的认可或共识，也不意味着 W3C 已经、正在或将要为本注释中解决的问题分配任何资源。本文档是一项正在进行的工作，可能会随时被其他文档更新、替换或淘汰。</p>
+<p>本文档源自 Sun 发布的现有规范，该规范由 Sun 与共同编写 Java <sup>TM</sup> Speech API 的公司共同开发。该规范称为 Java Speech API Grammar Format，可从 http://java.sun.com/products/java-media/speech/ (<strong>这个连接已经无法访问</strong>) 获得参考。除了规范名称和规范中相应的引用有所更改外，本文档在技术上与以前发布的文档完全相同。我们更改名称只是为了保护 Sun 商标。无论如何，我们预计联盟制定的任何派生规范都会有不同的名称。</p>
+<p>如果需要对文档进行任何更改，我们希望未来版本由 W3C 流程制作。Sun 保留 JSGF 规范的所有权，并保留独立维护和发展 JSGF 规范的权利，此类独立维护和发展应归 Sun 所有。</p>
+<p>当前 W3C 技术文档的列表可在<a href="https://w3.org/TR/">技术报告</a>页面找到。</p>
+<h2 id="_4">内容</h2>
+<h3 id="_5">前言</h3>
+<h4 id="_6">范围</h4>
+<p>以下内容被视为程序应该处理的问题，可以通过语音识别器的 API 进行处理：</p>
+<ul>
+<li>用于在语音识别模块中加载、创建和删除语法、语音识别用于激活的语法以及其他语法管理功能。</li>
+<li>加载语法的约定：例如，通过网站上的 URL。</li>
+<li>接收语法识别结果并处理这些结果的机制。</li>
+<li>对语法上不正确的语法定义的错误处理。</li>
+<li>词汇管理，包括标记发音的处理。</li>
+</ul>
+<h4 id="_7">贡献</h4>
+<p>Sun Microsystems, Inc. 收到了来自 Apple Computer, Inc.、AT&amp;T、Dragon Systems, Inc.、IBM Corporation、Novell, Inc.、Philips Speech Processing 和 Texas Instruments Incorporated 以及许多互联网评论者对此规范的贡献。</p>
+<h2 id="jspeech">JSpeech语法格式规范</h2>
+<h3 id="1">1. 简介</h3>
+<p>语音识别系统使计算机能够聆听用户语音并确定所说的内容。当前的技术尚不支持 不受约束的语音识别：能够聆听任何语境中的任何语音并准确转录。为了实现合理的识别准确度和响应时间，当前的语音识别器使用语法来限制所听内容。</p>
+<p>JSpeech 语法格式 ( JSGF) 定义了一种独立于平台、独立于供应商的方式来描述一种语法，即规则语法（也称为命令和控制语法或常规语法）。它使用开发人员和计算机均可读取和编辑的文本表示，并且可以包含在源代码中。本文不讨论 另一种主要语法类型，即听写语法。</p>
+<p>规则语法指定用户可能说出的话语 类型（口头话语类似于书面句子）。例如，简单的窗口控制语法可能会监听“打开文件”、“关闭窗口”等类似命令。</p>
+<p>用户能说什么取决于上下文：用户是在控制电子邮件应用程序、读信用卡号还是选择字体？应用程序知道上下文，因此应用程序负责为语音识别器提供适当的语法。</p>
+<p>本文档是 JSpeech 语法格式的规范。首先，描述了基本命名和结构机制。然后，描述了语法的基本组成部分，即语法头和语法主体。语法头声明了语法名称并列出了 导入的规则和语法。语法主体将此语法的规则定义为可朗读文本和对其他规则的引用的组合。最后，提供了一些语法声明的简单示例。</p>
+<h4 id="11">1.1 相关文档</h4>
+<p>以下是可能有助于理解和使用 JSpeech 语法格式的相关文档列表。</p>
+<p>JSpeech 语法格式采用了 Java TM编程语言 的一些风格和惯例。对全面规范感兴趣的读者可以参阅 《Java TM语言规范》，Gosling、Joy 和 Steele，Addison Wesley，1996 年 (GJS96)。</p>
+<p>JSpeech 语法格式中的语法可以用 Unicode 字符集编写，如《Unicode 标准》2.0 版（ Unicode Consortium、Addison-Wesley Developers Press、1996 年）（Uni96）中所定义。</p>
+<h3 id="2">2. 定义</h3>
+<h4 id="21">2.1 语法名称和包名称</h4>
+<p>JSpeech 语法格式定义的每个语法规则都有一个唯一的名称，该名称在语法头中声明。语法名称的合法结构为：</p>
+<pre><code class="language-java">packageName.simpleGrammarName   // 第一种形式：全名称
+grammarName                     // 第二种形式：简称
+</code></pre>
+<p>第一种形式（包名+简单语法名）是完整语法名。第二种形式是简单语法名（只有语法名）。完整语法名和简单语法名的示例包括：</p>
+<pre><code class="language-java">com.sun.speech.apps.numbers
+edu.unsw.med.people
+examples
+</code></pre>
+<p>包名和语法名的格式与 Java <sup>TM</sup> 编程语言中的包和类相同。完整的语法名是用点分隔的标识符（请参阅“Java 语言规范”，Gosling、Joy 和 Steele，Addison Wesley，1996 年，(GJS96) §3.8 和 §6.5）。</p>
+<p>JSGF 语法命名约定也遵循 Java 编程语言中类的命名约定（参见 GJS96）。该约定最大限度地减少了命名冲突的可能性。
+包名称应为：</p>
+<pre><code class="language-java">reversedDomainName。localPackaging
+</code></pre>
+<p>例如，<code>对于com.sun.speech.apps.numbers</code>，其中
+* <code>com.sun</code> 部分是 Sun 的反向 Internet 域名，
+* <code>speech.apps</code> 是 Sun 范围内划分名称空间的本地包名称，
+* <code>numbers</code> 是简单语法名称。</p>
+<h4 id="22">2.2 规则名称</h4>
+<p>语法由一组规则组成，这些规则共同定义了用户可能说出的内容。规则由可能说出的文本与对其他规则的引用组合。每条规则都有一个唯一的 <strong>规则名称</strong>。对规则的引用用 <code>&lt;&gt;</code> 包含规则名称字符（小于和大于）来表示。</p>
+<p>合法规则名称类似于 Java 编程语言中的标识符，但允许使用其他额外符号。合法规则名称是无限长度 Unicode 字符序列，需要满足以下2个规则：</p>
+<ul>
+<li>Java 编程语言标识符中合法的任何字符。</li>
+<li>以下附加标点符号：<code>+ - : ; , = | / \ ( ) [ ] @ # % ! ^ &amp; ~</code></li>
+</ul>
+<p>语法开发人员应该注意两个特定的限制。首先，规则名称与精确的 Unicode 字符串匹配进行比较，因此大小写很重要。例如，<code>&lt;Name&gt;</code> 和<code>&lt;NAME&gt;</code> 是 <code>&lt;name&gt;</code> 不同的。其次，规则名称中不允许使用 <code>空格</code> 。</p>
+<p>规则名称 <code>&lt;NULL&gt;</code> 和 <code>&lt;VOID&gt;</code> 是保留的。这些特殊规则将在本节后面讨论。</p>
+<p>Unicode 字符集涵盖了世界上大多数现存语言的书写脚本，因此规则名称可以用中文、日语、韩语、泰语、阿拉伯语、欧洲语言等多种语言书写。以下是规则名称的示例。</p>
+<ul>
+<li><code>&lt;hell&gt;</code></li>
+<li><code>&lt;Zürich&gt;</code></li>
+<li><code>&lt;user_test&gt;</code></li>
+<li><code>&lt;$100&gt;</code></li>
+<li><code>&lt;1+2=3&gt;</code></li>
+<li><span class="arithmatex">\(&lt;\pi\alpha\beta&gt;\)</span></li>
+</ul>
+<h5 id="221">2.2.1 限定名称和完全限定名称</h5>
+<p>尽管规则名称在语法中是唯一的，但不同的语法可能会重用相同的简单规则名称。后面的部分将介绍 <code>import</code> 语句，它允许一个语法引用另一个语法中的规则。当两个语法使用相同的规则名称时，对该规则名称的引用可能会产生歧义。<strong>限定名称</strong> 和 <strong>完全限定名称</strong> 用于在语法之间进行无歧义的引用。</p>
+<p>完全限定规则名称包括 <strong>完整语法名称</strong> 和 <strong>简单规则名称</strong>。例如：</p>
+<pre><code class="language-java">&lt;com.sun.greetings.english.hello&gt;
+&lt;com.sun.greetings.deutsch.gutenTag&gt;
+</code></pre>
+<p>限定规则名称仅包含简单语法名称和规则名称是一种有用的简写表示。例如：</p>
+<pre><code class="language-java">&lt;english.hello&gt;
+&lt;deutsch.gutenTag&gt;
+</code></pre>
+<p>规则名称的使用需遵守以下条件：</p>
+<ul>
+<li>限定的和完全限定的规则名称不能用在规则定义的左侧。</li>
+<li>导入语句必须使用完全限定的规则名称。</li>
+<li>可以使用以下形式通过限定名称和完全限定名称来引用本地规则 <code>&lt;localGrammarName.ruleName&gt;</code>。</li>
+</ul>
+<p>2.2.2 解析规则名称
+使用对规则名称的模糊引用是错误的。以下定义了解析引用的行为：</p>
+<p>本地规则优先。如果本地规则和一个或多个导入规则具有相同的名称，<ruleName>则对的简单规则引用<ruleName >就是对本地规则的引用。
+如果两个或多个导入规则具有相同的名称，<ruleName>但没有同名的本地规则，则对的简单规则引用<ruleName >会产生歧义并且会出错。要解决这种歧义，必须使用其限定或完全限定的名称来引用这些导入规则。
+如果两个或多个导入规则具有相同的名称，并且来自具有相同简单语法名称（但包名称必然不同）的语法，则简单规则引用或限定规则引用会产生歧义，并且会产生错误。这些导入规则必须通过其完全限定名称来引用。
+完全限定规则名称的引用永远不会产生歧义。
+当规则名称引用无法解析（未在本地定义且不是导入语法的公共规则）时，该引用的处理由识别器的软件接口4 定义。</p>
+<p>2.2.3 特殊规则名
+JSpeech 语法格式定义了两个特殊规则，<NULL>和 <VOID>。这些规则是通用定义的 - 它们可用于任何语法，无需显式导入语句 - 并且无法重新定义。这两个名称都是完全限定的，因此不需要限定语法名称。</p>
+<p><NULL>定义自动匹配的规则：即无需用户说任何话就进行匹配。</p>
+<p><VOID>定义一条永远不能说出来的规则。插入<VOID>序列会自动使该序列无法说出来5。</p>
+<p><NULL>和 规则<VOID>通常用于特殊情况。它们可用于阻止和启用部分语法、控制递归以及执行其他高级任务。<NULL> 和 <VOID>的用途将在本文档后面介绍。</p>
+<p>2.3 代币
+标记（有时称为终端符号）是语法的一部分，用于定义用户可以说出的内容。通常，标记相当于单词。标记可以单独出现，例如，</p>
+<p>你好
+你今天
+或者以空格字符分隔的标记序列，例如，</p>
+<p>这是一个测试
+打开目录
+在 JSpeech 语法格式中，标记是由空格、引号或语法中重要的其他符号分隔的字符序列：</p>
+<p>; = | * + &lt;&gt; () [] {} /<em> </em>/ //
+标记是对识别器词汇表 中条目的引用，通常称为词典。识别器的词汇表定义了标记的发音。有了发音，识别器就可以听取该标记。</p>
+<p>JSpeech 语法格式允许多语言语法，即包含来自多种语言的标记的语法。但是，大多数识别器都以单语方式运行，因此典型的语法将仅包含一种语言。将语法加载到识别器中的应用程序有责任确保其具有适当的语言支持。例如，以下是一个简单的多语言规则。</p>
+<p>&lt;否&gt; = 否 |不 |奈奥 |非 |内姆；
+大多数识别器都为所支持的每种语言提供了全面的词汇表。但是，不可能 100% 地涵盖某种语言。例如，词汇表中经常缺少名称、技术术语和外来词。对于词汇表中缺少的标记，有三种可能性：</p>
+<p>应用程序或用户可以将标记和发音添加到识别器的词汇表中，以确保一致的识别。
+好的识别器能够猜出词汇表中没有的许多单词的发音。
+如果以上两点都不适用，则行为由识别器的软件接口决定。在大多数情况下，未定义的标记将无法发音（相当于<VOID>），或者会导致错误或异常。
+标记不必是语言的正常书写单词，只要标记在识别器词汇表中正确定义即可。例如，为了处理“read”的两种发音（过去时听起来像“red”，现在时听起来像“reed”），应用程序可以定义两个单独的标记“read_past”和“read_present”，并赋予其适当的发音。</p>
+<p>2.3.1 引用代币
+标记不一定是单词。标记可以是单词序列或符号。可以使用引号将多单词标记和特殊符号括起来。例如：</p>
+<p>“纽约”地铁
+“+”
+当单词的发音因上下文而异时，多词标记很有用。多词标记还可用于简化结果处理，例如，获取“纽约”、“悉尼”和“里约热内卢”的单词标记结果。</p>
+<p>带引号的标记可以像任何其他标记一样包含在识别器的词汇表中。如果词汇表中未找到多词带引号的标记，则默认行为是确定引号内每个空格分隔的标记的发音，否则将引号内的文本视为单个标记。</p>
+<p>要在标记中包含引号符号，必须使用引号，并且标记内的引号前面必须有一个反斜杠“\”。同样，要在带引号的标记中包含反斜杠，则应在其前面加上另一个反斜杠。例如，以下是两个表示单个反斜杠和单个引号字符的标记。</p>
+<p>“\” “\””
+引用的标记中的空白非常重要。</p>
+<p>2.3.2 符号和标点
+大多数语音识别器都能够处理常见符号和标点符号。例如，英语识别器通常会处理撇号（“Mary's”、“it's”）和连字符（“new-age”）。</p>
+<p>然而，有许多文本形式对于识别器来说很难明确处理。在这些情况下，语法开发人员应使用尽可能接近人们说话方式且可能内置于词汇表中的标记。以下是常见示例。</p>
+<p>数字：“0 1 2”应扩展为“零一二”或“哦一二”。同样，“call 555 1234”应扩展为“call five five five one two three four”。
+日期：“1997 年 12 月 25 日”应写为“1997 年 12 月 25 日”。
+缩写和首字母缩略词：“Mr.”应写为“mister”，“St”应写为“street”。
+特殊符号：<code>&amp;' 表示“与号”或“和”，</code>+' 表示“加号”，等等。
+2.4 评论
+注释可以出现在头部和主体中。采用 Java 编程语言的注释样式（参见 GJS96）。注释有两种形式。</p>
+<p>/<em> 文本 </em>/    传统注释。/<em> 和 </em>/ 之间的所有文本都将被忽略。<br />
+// 文本   单行注释。从 // 到行尾的所有文本都将被忽略。<br />
+注释不能嵌套。此外，//在以 开头的注释中，没有特殊含义/<em>。同样，/</em>在以 开头的注释中，没有特殊含义//。</p>
+<p>注释可以出现在语法定义中的任何位置，除了标记、引用的标记、规则名称、标签和权重内。</p>
+<p>JSpeech 语法格式支持与 Java 编程语言 (GJS96, §18) 的文档注释风格类似的文档注释。这些特殊注释在“文档注释”一节 中定义。</p>
+<ol>
+<li>语法标题
+单个文件定义单个语法。定义语法包含两部分：语法头和语法主体。语法头包括一个自标识头，声明语法的名称并声明从其他语法导入规则。主体定义语法的规则，其中一些规则可能是公开的。</li>
+</ol>
+<p>3.1 自识别标头
+JSpeech 语法格式文档以自标识标头开头。此标头标识文档包含 JSGF，并指示正在使用的 JSGF 版本（当前为“V1.0”）。接下来，标头可选地指定文档中使用的字符编码。标头还可以可选地指定文档中指定的语法的语言环境。语言环境6指定语法支持的语言和可选的国家或地区变体。标头以分号字符和换行符结束。</p>
+<p>标题格式为：</p>
+<h1 id="jsgf-char-encoding-locale">JSGF 版本 char-encoding locale；</h1>
+<p>以下是自识别标题的示例。</p>
+<h1 id="jsgf-v10">JSGF V1.0；</h1>
+<h1 id="jsgf-v10-iso8859-5">JSGF V1.0 ISO8859-5；</h1>
+<h1 id="jsgf-v10-jis-ja">JSGF V1.0 JIS ja;</h1>
+<p>第一个例子没有提供字符编码或语言环境，因此会假定一个合理的默认值。在美国，默认值可能是 ISO8859-1（标准字符集）和“en”（英语符号）。第二个示例定义了 ISO8859-5 集（西里尔文），但假定了默认语言环境。最后一个例子定义了“JIS”字符集（日语字符集之一），并将语言定义为“ja”（日语）。</p>
+<p>井号 (`#') 必须是文档中的第一个字符，并且自识别标题中的所有字符必须属于所用编码的 ASCII 子集。</p>
+<p>3.2 语​​法名称声明
+语法的名称必须声明为该语法的第一个语句。声明必须使用完整的语法名称（包名称 + 简单语法名称）。因此，声明格式为以下任一格式：</p>
+<p>语法packageName.simpleGrammarName;
+语法grammarName;
+包和语法的命名在语法名称和包名称 部分中描述。</p>
+<p>例如：</p>
+<p>语法 com.sun.speech.apps.numbers;
+语法 edu.unsw.med.people；
+语法例句；
+3.3 导入
+语法头可以选择性地包含导入声明。导入声明位于语法声明之后，并且必须位于语法主体（规则定义）之前。导入声明允许在本地引用另一个语法的一条或所有公共规则。导入语句的格式如下</p>
+<p>导入&lt; fullyQualifiedRuleName&gt;；
+导入 &lt; fullGrammarName.*&gt;;
+例如，</p>
+<p>导入<com.sun.speech.app.index.1stTo31st>;
+导入 <com.sun.speech.app.numbers.*>;
+第一个例子是通过其完全限定规则名导入单个规则：&lt;1stTo31st&gt;来自语法的规则com.sun.speech.app.index。导入的规则&lt;1stTo31st&gt;必须是导入语法的公共规则。</p>
+<p>第二个导入语句中的星号的使用请求导入numbers语法的所有公共规则。例如，如果该语法定义了三个公共规则，，，<digits>那么<teens>所有<zeroToMillion>,这三个规则都可以在本地引用。</p>
+<p>请注意，由于语法名称和规则名称或星号都是必需的，因此导入语句永远不会采用以下形式：</p>
+<p>import <ruleName>; // 不合法
+导入的规则可以通过三种方式引用：通过其简单规则名称（例如 <digits>），通过其限定规则名称（例如<numbers.digits>），或者通过其完全限定规则名称（<com.sun.speech.apps.numbers.digits>）。</p>
+<p>名称解析行为已在本文档前面的解析规则名称中定义。请注意，当导入的规则始终由其完全限定的规则名称引用时，导入语句是可选的。</p>
+<p>// 导入 com.sun.speech.app.numbers 是可选的
+&lt;规则&gt; = <com.sun.speech.app.numbers.digits>;</p>
+<h3 id="4">4. 语法主体</h3>
+<h4 id="41">4.1 规则定义</h4>
+<p>语法主体定义规则。每条规则在规则定义中定义。规则在语法中定义一次。规则定义的顺序并不重要。</p>
+<p>规则定义的两种模式是：</p>
+<pre><code class="language-java">&lt;ruleName&gt; = ruleExpansion；
+public &lt; ruleName&gt; = ruleExpansion;
+</code></pre>
+<p>规则定义的组成部分包括 :
+* (1) 可选的公共声明 public、
+* (2) 所定义规则的名称、
+* (3) 等号 <code>=</code>
+* (4)规则的扩展
+* (5) 结束分号 <code>;</code>。</p>
+<p>定义之前、public 关键字与规则名称之间、等号字符周围以及分号周围的空格将被忽略。规则扩展中的空格很重要。</p>
+<p>规则扩展定义了规则的表述方式。它是标记（可以表述的文本）和对其他规则的引用的逻辑组合。使用术语“扩展”是因为扩展定义了规则在表述时如何扩展 - 单个规则可以扩展为许多表述单词加上本身被扩展的其他规则。后面的部分定义了合法扩展。</p>
+<h5 id="411">4.1.1 公共规则</h5>
+<p>语法中的任何规则都可以通过使用关键字声明为公共规则public 。公共规则有三种可能的用途：</p>
+<ul>
+<li>它可以在另一个语法的规则定义中通过其完全限定名称或导入声明和明确的引用形式进行引用。</li>
+<li>它可以用作识别的有效规则。也就是说，识别器可以使用该规则来确定可以说出什么。</li>
+<li>它可以被本地引用：即被同一语法中定义的任何公共或非公共规则引用。</li>
+</ul>
+<p>如果没有公共声明，规则将隐式为私有的8并且只能在本地语法中的规则定义中引用。</p>
+<h3 id="42">4.2 规则扩展</h3>
+<p>最简单的规则扩展是对 <code>token</code> 的引用与对其他规则的引用。例如，</p>
+<pre><code class="language-java">&lt;a&gt; = elephant；
+&lt;b&gt; = &lt;x&gt;；
+&lt;c&gt; = &lt;com.acme.grammar.y&gt;;
+</code></pre>
+<p>该规则 <code>&lt;a&gt;</code> 扩展为单个标记 "<code>elephant</code>"。因此，要说话，<code>&lt;a&gt;</code> 用户必须说出单词 "<code>elephant</code>"。</p>
+<p>该规则 <code>&lt;b&gt;</code> 扩展为 <code>&lt;x&gt;</code>。这意味着要说 <code>&lt;b&gt;</code>，用户必须说一些符合规则 <code>&lt;x&gt;</code> 的内容。同样，要说 规则 <code>&lt;c&gt;</code>，用户必须说一些符合规则 <code>&lt;com.acme.grammar.y&gt;</code> 的内容。</p>
+<p>更正式地说，以下是合法的扩展。</p>
+<ul>
+<li>任何 token。</li>
+<li>对同一语法中定义的任何公共或非公共规则的引用。</li>
+<li>对已导入当前语法的另一个语法的任何公共规则的引用。</li>
+<li>对已导入当前语法的另一个语法的公共规则的引用，当使用其完全限定规则名（带或不带导入）时。</li>
+</ul>
+<p>这些引用策略是本地定义的，即由当前规则的范围定义。例如，<code>grammar1</code> 中的规则可以合法地引用 <code>grammar2</code> 的公共规则，而后者又引用非公共规则 <code>grammar2</code>。换句话说，一个规则可以通过另一个语法的公共规则间接引用另一个语法的私有规则。</p>
+<p>空定义是不合法的。</p>
+<pre><code class="language-java">&lt;d&gt; = ; // 不合法
+</code></pre>
+<p>将规则定义为 "<code>&lt;NULL&gt;</code>"与 <code>&lt;VOID&gt;</code> 都是合法的。</p>
+<pre><code class="language-java">&lt;e&gt; = &lt;NULL&gt;; //合法
+&lt;f&gt; = &lt;VOID&gt;; //合法
+</code></pre>
+<p>以下各节解释了如何使用合法扩展的逻辑组合来定义更复杂的规则：</p>
+<ul>
+<li>组成：扩展序列和替代扩展集。</li>
+<li>分组：使用圆括号和方括号。</li>
+<li>一元运算符：用于重复扩展的 。</li>
+<li>将特定应用程序的标签附加到扩展中。</li>
+</ul>
+<h3 id="43">4.3 组成</h3>
+<h4 id="431">4.3.1 序列</h4>
+<p>规则可以由一系列扩展定义。合法扩展序列本身就是合法扩展，每个扩展都由空格分隔。例如，由于标记 token 和规则引用都是合法扩展，因此以下是合法的规则定义。</p>
+<pre><code class="language-java">&lt;where&gt; = I live in Boston;
+&lt;statement&gt; = this &lt;object&gt; is &lt;OK&gt;；
+</code></pre>
+<p>要说出一个序列，必须按照定义的顺序说出序列中的每个元素。
+* 在第一个示例中，要说出规则 <code>&lt;where&gt;</code>，说话者必须按照该顺序说出单词 "<code>I live in Boston</code>"。
+* 第二个示例将 token 与规则 <code>&lt;object&gt;</code> 和 <code>&lt;OK&gt;</code> 引用混合在一起。要说出规则 <code>&lt;statement&gt;</code>，用户必须在说完 "<code>this</code>" 后，说出与匹配 <code>&lt;object&gt;</code> 的内容，然后说 "<code>is</code>"，最后说与 <code>&lt;OK&gt;</code> 匹配的内容。</p>
+<p>序列中的元素可以是任何合法的扩展。这包括下文描述的替代项、组等结构。</p>
+<h4 id="432">4.3.2 替代方案</h4>
+<p>规则可以定义为一组由竖线字符 "<code>|</code>" 分隔的备选扩展，也可以由空格分隔。例如：</p>
+<pre><code class="language-java">&lt;name&gt; = Michael | Yuriko | Mary | Duke | &lt;otherNames&gt;;
+</code></pre>
+<p>要说出规则 <code>&lt;name&gt;</code>，说话者必须说出备选集合中的一个且只能说出一个。例如，说话者可以说 "<code>Michael</code>"、"<code>Yuriko</code>"、"<code>Mary</code>"、"<code>Duke</code>" 或任何符合规则 <code>&lt;otherNames&gt;</code>的词。但是，说话者不能说 "<code>Mary Duke</code>"。</p>
+<p>序列的优先级高于替代方案。例如:</p>
+<pre><code class="language-java">&lt;country&gt;= South Africa | New Zealand | Papua New Guinea;
+</code></pre>
+<p>上面的规则是一组三个备选方案，每个方案指定一个国家。</p>
+<p>空内容的替代方案是不合法。</p>
+<pre><code class="language-java">&lt;name&gt; = Michael | | Mary; // 不合法
+&lt;name&gt; = Michael | Mary | ; // 不合法
+</code></pre>
+<h3 id="433">4.3.3 权重</h3>
+<p>并非所有的语法词语都具有同等概率。可以将权重附加到备选集的元素上，以表示每个备选被说出来的可能性。权重是一个浮点数，周围是正斜杠，例如 /3.14/。权重越高，元素被说出来的可能性就越大。权重放在备选集的每个元素之前。例如：</p>
+<pre><code class="language-shell">&lt;size&gt; = /10/ small | /2/ medium | /1/ large;
+&lt;color&gt; = /0.5/ red | /0.1/ navy blue | /0.2/ sea green;
+&lt;action&gt; = please (/20/ save files | /1/ delete all files);
+&lt;place&gt; = /20/ &lt;city&gt; | /5/ &lt;country&gt;;
+</code></pre>
+<p>权重应该反映一组备选词的元素的出现模式。在第一个例子中，语法作者指出 <code>small</code>被说出的可能性是 <code>large</code> 的 10 倍，是 <code>medium</code> 的 5 倍。</p>
+<p>指定权重时必须满足以下条件：</p>
+<ul>
+<li>如果为备选方案集合中的一个项目指定了权重，则必须为每个项目指定一个权重（<strong>全有或全无规则</strong>）。</li>
+<li>权重是浮点数。例如，56、0.056、3.14e3、8f。</li>
+<li>斜线内只允许使用浮点数和空格。</li>
+<li>权重必须为零或更大。零权重表示该项目永远不能被说出：相当于用替换该项目 <code>&lt;VOID&gt;</code>。（零权重在开发语法时很有用。）</li>
+<li>至少需要一个非零正权重。
+适当的权重很难确定，猜测权重并不总是能提高识别性能。有效的权重通常是通过研究真实的语音和文本数据获得的。</li>
+</ul>
+<p>并非所有识别模块都会在识别过程中使用权重。但是，识别模块至少需要确保不会说出任何权重为零的替代词。</p>
+<h3 id="44">4.4 分组</h3>
+<h4 id="441">4.4.1 圆括号()</h4>
+<p>任何合法的扩展都可以使用圆括号 <code>()</code> 进行明确分组。分组具有较高的优先级，因此可用于确保规则的正确解释。它还有助于提高清晰度。例如，由于序列的优先级高于替代项，因此在以下规则定义中需要使用括号，以便 <code>please close</code> 和 <code>please delete</code> 是合法的。</p>
+<pre><code class="language-shell">&lt;action&gt; = please (open | close | delete);
+</code></pre>
+<p>下面的示例显示了三个元素的序列，每个元素都是一组用括号括起来的替代规则，以确保正确分组。</p>
+<pre><code class="language-shell">&lt;command&gt; = (open | close) (windows | doors) 
+(immediately | later);
+</code></pre>
+<p>要说出匹配的 <code>&lt;command&gt;</code> 内容，说话者必须从三组备选方案中各说出一个单词：例如，<code>open windows immediately</code>  或 <code>close doors later</code>。</p>
+<p>如果分组围绕单个扩展，则实体被定义为一个项目11的序列。例如：</p>
+<pre><code class="language-shll">( start )
+( &lt;end&gt; )
+</code></pre>
+<p>空括号不合法。</p>
+<pre><code>() // 不合法
+</code></pre>
+<h4 id="442">4.4.2 方括号 []</h4>
+<p>方括号可以放在任何规则定义周围，以表明内容是可选的。在其他方面，它相当于分组用的圆括号，并且具有相同的优先级。</p>
+<p>例如，</p>
+<pre><code class="language-shell">&lt;polite&gt; = please | kindly |oh mighty computer;
+public &lt;command&gt; = [ &lt;polite&gt; ] don't crash;
+</code></pre>
+<p>允许用户说 <code>don't crash</code>，并可选择添加一种礼貌形式，例如 <code>oh mighty computer don't crash</code>”或“<code>kindly don't crash</code>。</p>
+<p>空括号不合法。</p>
+<pre><code class="language-shell">[ ] // 不合法
+</code></pre>
+<h3 id="45">4.5 一元运算符</h3>
+<p>JSpeech 文法格式中有三个一元运算符：<code>Kleene 闭包</code>、加法运算符和标签。一元运算符具有以下共同特点：</p>
+<ul>
+<li>一元运算符可以添加到任何合法的规则扩展。</li>
+<li>它们具有很高的优先级：它们添加到紧接在前的规则扩展。</li>
+<li>任何规则扩展只能附加一个一元运算符（标签的此规则有个例外）。</li>
+<li>规则扩展和附加运算符之间的空格将被忽略。</li>
+</ul>
+<p>由于一元运算符的优先级高于序列和替代项的优先级，因此必须使用括号将序列或替代项集括起来，以将运算符附加到整个实体。</p>
+<h4 id="451-kleene">4.5.1 Kleene 闭包运算符 *</h4>
+<p>扩展后的规则跟着星号符号，表示扩展的规则可能被说出零次或多次。星号符号被称为 <code>Kleene 星号</code>（以 Stephen Cole Kleene 命名，他是该符号的首创者）。例如：</p>
+<pre><code class="language-shell">&lt;command&gt; = &lt;polite&gt;* don't crash;
+</code></pre>
+<p>允许用户说 <code>please don't crash</code>、<code>oh mighty computer please please don't crash</code> 之类的话，或者用 <code>don't crash</code> 来忽略礼貌。</p>
+<p>作为一元运算符，此符号具有高优先级。例如，在</p>
+<pre><code class="language-shell">&lt;song&gt; = sing New York *;
+</code></pre>
+<p>该运算符适用于最直接的合法扩展：标记 <code>York</code>。因此，<code>&lt;song&gt;</code> 用户可以说 <code>sing New York</code>、<code>sing New</code> 和 <code>sing New York York York</code>，但不能说 <code>sing New York New York</code>。引号或括号可用于修改 * 运算符的范围。例如，</p>
+<pre><code class="language-shell">&lt;song&gt; = sing ( New York )*;
+</code></pre>
+<p>确实匹配 <code>sing New York *;</code>。</p>
+<h4 id="452">4.5.2 加号运算符 +</h4>
+<p>规则扩展后跟加号，表示该扩展可能会被说一次或多次。例如，</p>
+<pre><code class="language-shell">&lt;command&gt; = &lt;polite&gt;+ don't crash;
+</code></pre>
+<p>需要至少一种礼貌形式。因此，它允许用户说“请不要崩溃”。但是，“不要崩溃”是不合法的。</p>
+<h3 id="46">4.6 标签</h3>
+<p>标签为语法编写者提供了一种机制，可以将特定于应用程序的信息附加到规则定义的部分。应用程序通常使用标签来简化或增强识别结果的处理。</p>
+<p>标签附件不会影响语法的识别。相反，标签会附加到识别器返回给应用程序的结果对象上。识别器的软件接口定义了提供标签的机制12。</p>
+<p>标签是一元运算符。因此，它可以附加到任何合法的规则扩展中。标签是一个由花括号 <code>{}</code> 分隔的字符串。括号内的所有字符都被视为标签的一部分，包括空格。空括号 <code>{}</code> 是合法标签。在这种情况下，标签应被解释为零长度字符串（Java 编程语言中的“”）。</p>
+<p>要在引号中包含结束括号字符，必须使用反斜杠 <code>\</code> 字符对其进行转义。要包含反斜杠字符，也必须使用反斜杠对其进行转义。例如，</p>
+<pre><code class="language-shell">{ {nasty \\looking\\ tag\} }
+</code></pre>
+<p>被处理为以下字符串：</p>
+<pre><code class="language-shell">{nasty \looking\ tag}
+</code></pre>
+<p>该标签附加到紧接在前的规则扩展（中间的空格将被忽略）。例如：</p>
+<pre><code class="language-shell">&lt;rule&gt; = &lt;action&gt; {tag in here};
+&lt;command&gt;= please (open {OPEN} | close {CLOSE}) the file;
+&lt;country&gt; = Australia {Oz} | (United States) {USA} |
+America  {USA}  | (U S of A) {USA};
+</code></pre>
+<p>作为一元运算符，标签附加的优先级高于序列和替代项。例如，在</p>
+<pre><code class="language-shell">&lt;action&gt; = book | magazine | newspaper {thing};
+</code></pre>
+<p><code>thing</code> 标签仅附加到“newspaper”标记。可以使用括号来修改标签附加：</p>
+<pre><code class="language-shell">&lt;action&gt; = (book | magazine | newspaper) {thing};
+</code></pre>
+<p>与其他一元运算符不同，规则扩展后可以有多个标签。例如，</p>
+<pre><code class="language-shell">&lt;OKRule&gt; = &lt;action&gt; {tag1} {tag2} {tag3}; // legal
+</code></pre>
+<p>这被解释为好像使用了括号：</p>
+<pre><code class="language-shell">&lt;OKRule&gt; = ((&lt;action&gt; {tag1}) {tag2}) {tag3}; //合法
+</code></pre>
+<p>此语法便利仅允许用于标签。以下情况不允许：</p>
+<pre><code class="language-shell">&lt;badRule&gt; = &lt;action&gt; * {tag1}; // 不合法
+&lt;badRule&gt; = &lt;action&gt; {tag1} +; // 不合法
+</code></pre>
+<h4 id="461">4.6.1 使用标签</h4>
+<p>标签可以简化识别结果的处理，从而简化应用程序的编写。标签的内容以及标签的使用完全由开发人员自行决定。</p>
+<p>标签的一个重要用途是国际化应用程序。以下是四种语法的规则定义示例，每种语法针对一种语言。应用程序将用户所说语言的语法加载到适当的识别器中。标签在所有语言中都保持不变，从而简化了处理结果的应用程序软件。通常，语法名称将包含语言标识符，以便可以通过编程方式定位和加载它。</p>
+<p>在英语语法中：</p>
+<pre><code class="language-shell">&lt;greeting&gt;= (howdy | good morning) {hi};
+</code></pre>
+<p>在日语语法中：</p>
+<pre><code class="language-shell">&lt;greeting&gt;= (ohayo | ohayogozaimasu) {hi};
+</code></pre>
+<p>在德语语法中：</p>
+<pre><code class="language-shell">&lt;greeting&gt;= (guten tag) {hi};
+</code></pre>
+<p>在法语语法中：</p>
+<pre><code class="language-shell">&lt;greeting&gt;= (bon jour) {hi};
+</code></pre>
+<h3 id="47">4.7 优先级</h3>
+<p>以下定义了 JSpeech 语法格式中规则扩展实体的相对优先级。列表从最高优先级到最低优先级排列。</p>
+<p>规则名称包含在尖括号内，以及带引号或不带引号的标记。
+<code>()' 括号用于分组，</code>[]' 括号用于可选分组。
+一元运算符（“+”、“*”和标签附件）适用于最紧密的紧接前置规则扩展。（要将它们应用于序列或替代项，请使用“()”或“[]”分组。）
+规则扩展的序列。
+'|' 分隔替代规则扩展集。
+4.8 递归
+递归是规则本身的定义。递归是一种强大的工具，可以表示口语中出现的许多复杂语法形式。支持 JSpeech 语法格式的识别器允许右递归。在右递归中，规则将自身作为其定义的最后一部分。例如：</p>
+<p>&lt;命令&gt; = &lt;动作&gt; | (&lt;动作&gt; 和 &lt;命令&gt;);
+&lt;动作&gt; = 停止 | 开始 | 暂停 | 恢复 | 完成；
+允许以下命令：“停止”、“停止并完成”、“开始并恢复并完成”。</p>
+<p>嵌套右递归也是允许的。嵌套右递归是指一条规则的定义引用了另一条规则，而该规则又引用了第一条规则，每个递归引用都是定义的最后一部分。例如，</p>
+<p><X> = 某物 | <Y>;
+<Y> = 另一件事 <X>；
+嵌套右递归可能出现在语法中。然而，强烈不建议这样做，因为它会带来不必要的复杂性和潜在的维护问题。</p>
+<p>任何右递归规则都可以使用 Kleene 星号“*”和/或加号运算符“+”重写。例如，以下规则定义是等效的：</p>
+<p>&lt;命令&gt; = &lt;动作&gt; | (&lt;动作&gt; 和 &lt;命令&gt;);
+&lt;命令&gt; = &lt;动作&gt; (和 &lt;动作&gt;) <em>;
+尽管可以使用“+”和“</em>”运算符重写右递归语法，但允许使用递归形式，因为它允许更简单、更优雅地表示某些语法。不支持其他形式的递归（左递归、嵌入式递归），因为无法保证重写条件13。</p>
+<p>4.9 <NULL> 和 <VOID> 的使用
+本文档前面定义的 两个特殊规则名称<NULL>-和 <VOID>- 具有许多高级用途。</p>
+<p>作为任何规则扩展的替代，引用<NULL>与使用可选分组相同。因此，以下是等效定义：</p>
+<p><x> = a | &lt;空&gt;；
+<x> = [ 一 ];
+Kleene 星号和右递归可以映射如下：</p>
+<p><x> = <NULL> | 一个<x>；
+<x> = a*;
+对于前两种情况，语法是相同的，因为用户可能会说出完全相同的话语。但是，当用户说出与语法匹配的内容时，识别器生成的结果表示可能会存在程序上的差异。</p>
+<p><NULL>和 的最后一种用途<VOID>是门控。要打开和关闭语法的特定部分，应用程序可以定义规则<gate>，将其放在要打开和关闭的语法部分之前，并在以下两者之间交替定义<gate>：</p>
+<p>&lt;门&gt; = &lt;空&gt;；
+&lt;门&gt; = &lt;虚空&gt;;
+当 时<gate>，<VOID>它是不可说的，并且语法区域被关闭。</p>
+<p>需要注意的是，为了有效工作，此技术需要一个能够在更改定义后有效地重新编译语法的识别器<gate>。并非所有识别器都能有效地执行此重新编译。</p>
+<p>4.10 文档注释
+JSpeech 语法格式支持与 Java 编程语言 (GJS96, §18) 的文档注释风格类似的文档注释。此类注释可以出现在语法声明之前、导入语句之前以及任何规则的定义之前。可以从这些注释中自动生成超文本网页和其他形式的文档。</p>
+<p>文档注释以字符开始/<em><em>并以结束</em>/。在每个注释行上，前导</em>字符和任何前面的空格都将被忽略。</p>
+<p>注释的第一句（以第一个句号结束）应当是一个总结句，对所注释的实体进行简洁的描述。</p>
+<p>与 Java 编程语言中的文档注释不同，JSpeech 语法格式中的文档注释不允许使用 HTML 标记。这是因为 HTML 标记和 JSGF 规则名称引用使用相同的格式。例如，是<font>规则名称还是 HTML 代码？</p>
+<p>带标记的段落 由一行文档注释标记，该注释以 @ 字符开头，后跟下面定义的关键字之一。带标记的段落包括注释的以下几行，直到下一个带标记的段落的开头或文档注释的结尾。（文档标记与规则定义中的标记无关。）</p>
+<p>以下示例显示了文档注释的基本结构。 示例 3：文档注释显示了简单语法的注释示例。</p>
+<p>/*<em>
+    * 第一句话提供了摘要。
+    * 可以插入附加文本和段落。
+    *
+    * @tag 下面定义了几种类型的标签
+    </em>/
+4.10.1 @author 标签
+该@author标签可用于语法声明的文档注释中。尽管该标签没有明确的结构@author，但建议将每位作者列在单独的标签中。@author单个注释中可以包含多个标签。</p>
+<p>例如，</p>
+<p>@author 詹姆斯邦德
+@author Jose Alvarez
+4.10.2 @version标签
+语法声明的文档注释中可以包含单个@version标签。没有定义的结构或格式。例如，
+@version 版本信息
+4.10.3 @see 标签
+任何文档注释中都可以使用任意数量的@see标签。标签表示对另一条规则（本地或导入）或另一语法的交叉引用。后缀.*表示引用的是语法。
+@see <com.acme.number.zeroToTen>
+@see <com.acme.number.*>
+@see <zeroToTen>
+4.10.4 @example 标签
+可以在规则声明的文档注释中提供标签@example，以提供规则如何表述的示例。适当的示例使语法和规则更容易理解。示例文本还可以被语法工具用来验证语法的正确性。
+@example请说出你的姓名和年龄
+@example 我喜欢“南美洲”
+鼓励开发人员在示例中使用与规则定义中相同的标记化。例如，上面的第二个示例应被解释为两个标记，因为“south america”周围有引号。但是，工具开发人员应考虑示例文本可能包含人类可读的格式，以便清晰理解。对于英语，这可能包括标点符号（句号、逗号、问号、感叹号等）、某些标记的大写、修改后的标记化（例如缺少引号）。</p>
+<p>标签@example可能包含规则名称引用。例如，</p>
+<p>@example 我想要一个带有 <topping> 的披萨
+将随着为规则定义的每个示例标签而扩展<topping>（“我想要一个意大利辣香肠披萨”、“我想要一个蘑菇披萨”等等）。</p>
+<p>5.示例
+通过将简单的规则组合在一起，可以构建复杂的语法来捕捉用户所说的内容。以下是具有完整标题和正文的语法示例。</p>
+<p>5.1 示例 1：简单的命令和控制
+此示例显示了定义控制窗口的口头命令的两个基本语法。其中包括可选的礼貌性，以显示如何使语音交互更加自然和对话性更强。</p>
+<h1 id="jsgf-v10_1">JSGF V1.0；</h1>
+<p>语法 com.acme.politeness；</p>
+<p>// 身体
+public <startPolite> = (请 | 请 | 你能 |
+哦，强大的计算机) *;
+public <endPolite> = [ 请 | 谢谢 | 谢谢你 ];
+语法politeness本身并没有什么用，但导入 commands语法可以增加对话风格。</p>
+<h1 id="jsgf-v10-iso8859-1">JSGF V1.0 ISO8859-1 英文;</h1>
+<p>语法 com.acme.commands;
+导入 <com.acme.politeness.startPolite>；
+导入 <com.acme.politeness.endPolite>；</p>
+<p>/*<em>
+  * 基本命令。
+  * @example 请移动窗口
+  * @example 打开一个文件
+  </em>/</p>
+<p>公共<basicCmd> = <startPolite> &lt;命令&gt; <endPolite>;</p>
+<p>&lt;命令&gt; = &lt;动作&gt; &lt;对象&gt;;
+&lt;动作&gt; = /10/打开|/2/关闭|/1/删除|/1/移动；
+&lt;对象&gt; = <a href="窗口|文件|菜单">这个|一个</a>；
+该commands语法定义了一条public规则，它由两条导入规则和以及三条私有规则<basicCommand>组成，和。 和规则都是备选词集，操作列表具有权重，表明“open”比其他词更有可能出现。规则定义了一个序列，其中后面可选地跟着“the”或“a”，并且总是跟着一个。 <startPolite><endPolite><command><action><object><action><object><command><action><object></p>
+<p>由于<com.acme.commands.basicCommand>是公开的，因此可以将其激活以供识别。当它处于活动状态时，用户可以说出以下命令：</p>
+<p>“打开一扇窗户”
+“请关闭文件”
+“哦，强大的计算机，请打开菜单”
+5.2 示例 2：解析名称
+以下示例语法说明了处理服装的应用程序如何使用完全限定名称。两个导入的语法定义了有关裤子和衬衫的导入规则，包括衬衫和裤子可能具有的颜色列表。本地规则<color>是导入的颜色列表的组合。由于对的引用<color>不明确（它可能来自裤子或衬衫语法），因此需要使用限定或完全限定的名称。</p>
+<h1 id="jsgf-v10_2">JSGF V1.0；</h1>
+<p>语法 com.acme.selections;
+导入 <com.acme.pants.*>;
+导入 <com.sun.shirts.*>;</p>
+<p>&lt;颜色&gt; = <com.acme.pants.color> | 
+<com.acme.shirts.color>;
+public <statement> = 我喜欢 <color>;
+最后一个定义中的引用<color>没有歧义：因为本地规则优先于导入规则，所以它指的是本地定义的 <color>规则。在本地规则的定义中<color>，可以使用限定名称，因为它们是明确的引用：即，</p>
+<p>&lt;颜色&gt; = &lt;裤子.颜色&gt; | &lt;衬衫.颜色&gt;;
+5.3 示例 3：文档注释
+以下示例语法说明了文档注释在简单语法中的使用。它显示了文档注释的所有三种使用类型：语法声明、导入语句和规则定义。</p>
+<h1 id="jsgf-10-iso8559-1">JSGF 1.0 ISO8559-1；</h1>
+<p>/*<em>
+  * 定义简单的旅行指令。
+  *
+  * @author Mary Contrary
+  * @版本 3.141beta
+  </em>/</p>
+<p>语法 com.acme.travel;</p>
+<p>/*<em>
+  * 获取城市名称列表：<city>。
+  </em>/</p>
+<p>导入 <com.acme.cities.*>；</p>
+<p>/*<em>
+  * 简单的旅行命令
+  *
+  * @example 从 悉尼 到 东京 再到 都柏林
+  * @example 从“旧金山”前往曼谷
+  </em>/</p>
+<p>public <travel> = 从 <city> 出发 ( 到 <city> )+;
+脚注
+1 Java TM编程语言 中的标识符是无限长度的 Unicode 字符序列。第一个字符是字母或一组特殊符号之一（包括“$”和“_”）。后续字符包括字母、数字、特殊符号和其他字符。
+2 提供了API方法来测试规则名称的合法性。</p>
+<p>3 空白字符集由 Unicode 字符集定义。</p>
+<p>4 默认行为应该是抛出异常或发出错误消息。</p>
+<p>5 为了进行有效测试，API 应该为 NULL 和 VOID 定义静态变量。</p>
+<p>6 参见 RFC 1766。</p>
+<p>7 这些属性不同于某些语言和计算语法格式，这些格式允许非终端有多种替代定义，或者顺序很重要。</p>
+<p>8 与 Java 编程语言不同，JSpeech 语法格式没有private或 的关键字protected。</p>
+<p>9 如规则名部分所定义，如果<x>或<com.acme.grammar.y>为导入规则，则应有适当的导入语句，且该规则必须在导入的语法中声明为公共规则。</p>
+<p>10 Java 编程语言要求浮点数带有“f”或“F”后缀。JSpeech 语法格式不要求这一点。</p>
+<p>11 该定义提供了解析和其他语法分析的一致性。</p>
+<p>12 最低预期行为是解析树应该包含标签。</p>
+<p>十三 从技术上讲，JSpeech 语法格式定义了正式称为 常规语法的内容。为了清晰或方便，允许使用 一些通常与上下文无关语法相关的功能。</p>
+<h2 id="_8">参考</h2>
+<ol>
+<li>https://www.w3.org/TR/jsgf/</li>
+<li>https://juejin.cn/post/7389931555550887972</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../../../inference/introduction/" class="md-footer__link md-footer__link--prev" aria-label="Previous: introduction">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                introduction
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../../todo/todo/" class="md-footer__link md-footer__link--next" aria-label="Next: todo">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                todo
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy;; 2024 - now | xionghaha 
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.annotate", "content.code.copy", "content.tooltips", "navigation.expand", "navigation.footer", "navigation.indexes", "navigation.instant.prefetch", "navigation.instant.progress", "navigation.path", "navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.tracking", "search.highlight", "search.share", "search.suggest"], "search": "../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.081f42fc.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+      
+        <script src="../../../../js/open_in_new_tab.js"></script>
+      
+        <script src="../../../../js/open_in_new_tab.js"></script>
+      
+    
+  </body>
+</html>
