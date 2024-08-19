@@ -947,6 +947,8 @@
       
         
       
+        
+      
     
     
       
@@ -1195,6 +1197,27 @@
   
   <span class="md-ellipsis">
     实现
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bpe/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BPE算法
   </span>
   
 
@@ -1501,7 +1524,7 @@
             
   
   <span class="md-ellipsis">
-    regular_expression_text_normalization_and_edit_distance
+    正则表达式文本规整与编辑距离
   </span>
   
 
@@ -1511,7 +1534,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_9_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_9_1">
             <span class="md-nav__icon md-icon"></span>
-            regular_expression_text_normalization_and_edit_distance
+            正则表达式文本规整与编辑距离
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1790,21 +1813,21 @@
 <p>同时, 在大模型和大数据的加持下, <strong>分词(tokenize)</strong> 算法的准确率对模型性能的影响也大大降低了。即使分词不合理或者分错了, 模型也能够 "理解" 句子的含义, 因此相关领域的研究也不是特别多。本文就来聊一聊大模型时代的分词算法。</p>
 <p>按照语言体系, 分词算法大体上可以分成两种:</p>
 <ul>
-<li><strong>中文分词</strong>: 句子中词与词之间没有分隔符, 比方说 汉语, 日语, 韩语</li>
-<li><strong>英文分词</strong> : 句子中用 空格 作为词与词之间的分隔符, 比方说 英语, 法语, 德语</li>
+<li><strong>中文分词</strong>: 句子中词与词之间没有分隔符, 比方说 汉语, 日语, 韩语。</li>
+<li><strong>英文分词</strong> : 句子中用 空格 作为词与词之间的分隔符, 比方说 英语, 法语, 德语。</li>
 </ul>
 <p>下面, 我们先分别了解一下两种体系的分词方式。</p>
 <h2 id="_2">二、中文分词</h2>
 <p>中文分词 是一个独立的 NLP 任务, 也是入门 NLP 很好的方式之一, 主要的方式有:</p>
 <ul>
 <li>基于 <strong>词表匹配</strong> 的方式 (前缀字典树, AC 自动机)</li>
-<li>基于 <strong>n-gram</strong> 的 概率路径 方式 (维特比算法)</li>
+<li>基于 <strong>n-gram</strong> 的 <strong>概率路径方式</strong> (维特比算法)</li>
 <li>转化为 <strong>序列标注</strong> 任务, 使用 HMM, CRF 或者 token classification 等模型</li>
 </ul>
-<p>其中, 最后一种方式需要人工标注数据, 然后训练模型。前两种方式除了人工标注数据外, 还可以通过 无监督学习 的方式生成所需要 词典。为了和序列标注任务相互对应, 我们将 <strong>生成词典</strong> 的过程也称为 "训练"。</p>
-<p>对于第一种方式, "训练" 的过程只需要构建一个 <strong>词表</strong> 即可, 这种算法也被称为 <strong>新词发现</strong>, 具体的可以去看 Matrix67 的博客: 互联网时代的社会语言学：基于SNS的文本数据挖掘。</p>
-<p>而对于第二种方式, "训练" 的过程除了构建 <strong>词表</strong> 外, 还要计算相对应的概率。当然, 不同的匹配方式和概率路径计算方式, "训练" 过程是不一样的。</p>
-<p>为了方便理解和说明, 在后文中, 中文分词算法统称为 <strong>文本切分</strong> 算法, 而前两种方式的无监督训练方法称为 无监督的文本切分算法。</p>
+<p>其中, 最后一种方式需要人工标注数据, 然后训练模型。前两种方式除了人工标注数据外, 还可以通过 <strong>无监督学习</strong> 的方式生成所需要 <strong>词典</strong>。为了和序列标注任务相互对应, 我们将 <strong>生成词典</strong> 的过程也称为 "训练"。</p>
+<p>对于第一种方式, "训练" 的过程只需要构建一个 <strong>词表</strong> 即可, 这种算法也被称为 <strong>新词发现</strong>, 具体的可以去看 <a href="http://www.matrix67.com/blog/archives/5044">Matrix67 的博客: 互联网时代的社会语言学：基于SNS的文本数据挖掘</a>。</p>
+<p>而对于第二种方式, "训练" 的过程除了构建 <strong>词表</strong> 外, 还要计算相对应的 <strong>概率</strong>。当然, 不同的匹配方式和概率路径计算方式, "训练" 过程是不一样的。</p>
+<p>为了方便理解和说明, 在后文中, 中文分词算法统称为 <strong>文本切分算法</strong>, 而前两种方式的无监督训练方法称为 <strong>无监督的文本切分算法</strong>。</p>
 <h2 id="_3">三、英文分词</h2>
 <p>对于英文分词来说, 一般情况下, 基于 <strong>空格 + 标点</strong> 分词即可, 用正则表达式就能解决。</p>
 <p>但是, 对于文本生成任务来说, 我们需要 <strong>词表级别</strong> 的分类任务, 即 softmax 回归的类别数和词表的数量是一致的。此时, 主要会产生以下一些问题:</p>
@@ -1869,7 +1892,7 @@
 <li>
 <p>第三步, 遍历 <code>word</code> 中所有可能的 <strong>subword pair</strong>, 统计他们出现的频数。然后将数据集中 频数最高 的那一个 subword pair 合并在一起, 合并后的 subword 加入 <strong>词表</strong> 中, <strong>合并规则加入</strong> 合并规则列表 中。</p>
 <p>举例来说, "<code>b e s t</code>" 现在有三种可能的 <strong>subword pair</strong>: "<code>b e</code>", "<code>e s</code>" 和 "<code>s t</code>"。统计完成后, 发现在语料库中, "<code>s t</code>" 出现的频数最高。那么, 我们就将整个数据集中的 "<code>s t</code>" 合并起来, 变成 "<code>st</code>"。此时 <code>best</code> 的拆分结果就是 "<code>b e st</code>", 从四个 subword 变成三个 subword。</p>
-<p>同时, 将 "st" 这个 subword 加入 词表 中, 将 ("s t", "st") 加入 合并规则列表 中。</p>
+<p>同时, 将 "<code>st</code>" 这个 subword 加入 <strong>词表</strong> 中, 将 ("<code>s t</code>", "<code>st</code>") 加入 <strong>合并规则列表</strong> 中。</p>
 </li>
 <li>
 <p>第四步, 一致重复 第三步 的操作, 直至 <strong>词表</strong> 达到预设的大小即可。</p>
@@ -1958,7 +1981,7 @@ BytePiece：更纯粹、更高压缩率的Tokenizer
 <p>Languages of the World</p>
 <h2 id="_8">参考</h2>
 <ol>
-<li>https://zhuanlan.zhihu.com/p/664717335?utm_medium=social&amp;utm_psn=1797553839362162688&amp;utm_source=wechat_session</li>
+<li><a href="https://zhuanlan.zhihu.com/p/664717335?utm_medium=social&amp;utm_psn=1797553839362162688&amp;utm_source=wechat_session">LLM 分词算法 (BPE, WordPiece, Unigram) 简介</a></li>
 </ol>
 
 
