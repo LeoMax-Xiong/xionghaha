@@ -98,6 +98,7 @@ nav:
     - utf8-unicode: "./tokenizer/utf8_unicode.md"
     - introduction: "./tokenizer/introduction.md"
     - implemetion: "./tokenizer/tokenizer实现.md"
+    - BPE算法: "./tokenizer/bpe.md"
   - rewrite:
     - introduction: "./rewrite/introduction.md"
   - onnx:
@@ -105,7 +106,7 @@ nav:
   - inference:
     - introduction: "./inference/introduction.md"
   - speech_and_language_processing:
-    - regular_expression_text_normalization_and_edit_distance: 
+    - 正则表达式文本规整与编辑距离: 
       - jsgf: "./speech_and_language_processing/jsgf/jsgf.md"
       # - blogs:
       #   - "基础": blog/blogs/basic.md
