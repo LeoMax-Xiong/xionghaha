@@ -91,6 +91,8 @@ nav:
         - "基础": blog/blogs/basic.md
   - datasets:
     - tod: "./datasets/tod.md"
+    - SFT:
+      - "Lima": "./datasets/sft/lima.md"
   - hardware:
     - basic: "./hardware/基础.md"
   - tokenizer:
@@ -102,7 +104,8 @@ nav:
   - rewrite:
     - introduction: "./rewrite/introduction.md"
   - onnx:
-    - introduction: "./onnx/introduction.md"
+    - introduction: 
+      - ONNX概念: "./onnx/introduction.md"
   - inference:
     - introduction: "./inference/introduction.md"
   - speech_and_language_processing:
@@ -116,6 +119,14 @@ nav:
 markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
+  - pymdownx.highlight:
+      anchor_linenums: true  #代码块行号锚链接，默认false
+      use_pygments: true  #在构建期间使用Pygments或在浏览器中使用 JavaScript 语法高亮器进行高亮显示，默认true
+      auto_title: true  #自动为所有代码块添加标题，显示正在使用的语言的名称，默认false
+      linenums: true #向所有代码块添加行号，默认false
+      linenums_style: pymdownx-inline #三种添加行号的方法，建议table或pymdownx-inline。默认table
+  - pymdownx.superfences
+  - admonition
 
 extra_javascript:
   - https://polyfill.io/v3/polyfill.min.js?features=es6

@@ -1,6 +1,6 @@
 # BPE 算法
 
-BPE 算法的全称是 Byte-Pair Encoding, 最早是 1994 年提出应用于 [数据压缩](http://www.pennelynn.com/Documents/CUJ/HTML/94HTML/19940045.HTM) 任务。在 2015 年, [Neural Machine Translation of Rare Words with Subword Units]((https://arxiv.org/abs/1508.07909)) 提出将其延申至 **文本分词** 任务, 同时没有改变算法的名称。(**如果你不了解之前的数据压缩算法, 可能会好奇为什么是这个名字**)。
+BPE 算法的全称是 Byte-Pair Encoding, 该算法最早是 1994 年提出应用于 [数据压缩](http://www.pennelynn.com/Documents/CUJ/HTML/94HTML/19940045.HTM) 任务。在 2015 年, [Neural Machine Translation of Rare Words with Subword Units]((https://arxiv.org/abs/1508.07909)) 提出将其延申至 **文本分词** 任务, 同时没有改变算法的名称。(**如果你不了解之前的数据压缩算法, 可能会好奇为什么是这个名字**)。
 
 OpenAI 关于 GPT 的一系列工作, 以及 Meta 关于 LLaMA 的一系列工作都是使用这种分词方式。OpenAI 虽然没有开源 GPT-3 模型的参数权重, 但是开源了分词库 [tiktoken](https://github.com/openai/tiktoken), 帮助用户在调用接口前计算 token 数。
 
@@ -8,23 +8,23 @@ OpenAI 关于 GPT 的一系列工作, 以及 Meta 关于 LLaMA 的一系列工�
 
 * 第一步：使用 **空格** 对语料库中的所有句子进行拆分，得到所有可能的 `word`。
 
-* 第二步：将语料库中所有的 `word` 以字符 (最小颗粒) 为单位进行拆分, 每一个字符作为一个 subword。比方说, "`best`" 被拆分成 "`b e s t`" 四个 subword (用 **空格** 作为分隔符)。
+* 第二步：将语料库中所有的 `word` 以字符 (最小颗粒) 为单位进行拆分, 每一个字符作为一个 subword。比方说, 单词"`best`" 被拆分成 "`b e s t`" 四个字粒度 subword (用 **空格** 作为分隔符)。
 
 * 第三步, 初始化 **词表** 和 **合并规则列表**。其中, **词表** 就是所有可能的 **subword** 集合, 也就是初始化成语料库中所有可能的字符集合。
 
-* 第四步, 遍历 `word` 中所有可能的 **subword pair**, 统计他们出现的频数。然后将数据集中 频数最高 的那一个 subword pair 合并在一起, 合并后的 subword 加入 **词表** 中, **合并规则加入** 合并规则列表 中。
+* 第四步, 遍历 `word` 中所有可能的 **subword pair**, 统计他们出现的频数。然后将数据集中 **频数最高** 的那一个 subword pair 合并在一起, 合并后的 subword 加入 **词表** 中, **合并规则加入** 合并规则列表 中。
 
     举例来说, "`b e s t`" 现在有三种可能的 **subword pair**: "`b e`", "`e s`" 和 "`s t`"。统计完成后, 发现在语料库中, "`s t`" 出现的频数最高。那么, 我们就将整个数据集中的 "`s t`" 合并起来, 变成 "`st`"。此时 `best` 的拆分结果就是 "`b e st`", 从四个 subword 变成三个 subword。
 
     同时, 将 "`st`" 这个 subword 加入 **词表** 中, 将 ("`s t`", "`st`") 加入 **合并规则列表** 中。
 
-* 第五步, 一致重复 第三步 的操作, 直至 **词表** 达到预设的大小即可。
+* 第五步, 一直重复 第三步 的操作, 直至 **词表** 达到预设的大小即可。
 
-整个训练过程就是不断地去寻找语料库中频数最高的 **subword pair**, 然后合并成一个 **subword**, 和 [数据压缩](http://www.pennelynn.com/Documents/CUJ/HTML/94HTML/19940045.HTM) 算法中的核心思想是一致的。
+整个训练过程就是不断地去寻找语料库中频数最高的 **subword pair**, 然后合并成一个 **subword**, 这个过程和 [数据压缩](http://www.pennelynn.com/Documents/CUJ/HTML/94HTML/19940045.HTM) 算法中的核心思想是一致的。
 
 需要注意的是, **subword pair** 的合并次数并不一定等于其频数。举例来说, 对于 "`x x x`" 来说, 其中 "`x x`" 出现了两次, 但是我们合并时只能合并一个, 即 "`xx x`"。
 
-那么, 我们怎么对 word 进行分词呢? 首先, 将 word 以字符为单位进行拆分, 一个字符作为一个 subword。然后按照 **合并规则列表** 中的顺序, 如果出现了 **subword pair**, 就进行合并。最后剩下的 subword 列表就是最终的分词结果。
+那么, 我们怎么对 word 进行分词呢? 首先, 将 word 以字符粒度为单位进行拆分, 一个字符作为一个 subword。然后按照 **合并规则列表** 中的顺序, 如果出现了 **subword pair**, 就进行合并。最后剩下的 subword 列表就是最终的分词结果。
 
 整体上的方案就是这样, 可以说非常巧妙。这个算法开源在 [subword-nmt](https://github.com/rsennrich/subword-nmt) 项目中。
 
@@ -34,8 +34,8 @@ OpenAI 关于 GPT 的一系列工作, 以及 Meta 关于 LLaMA 的一系列工�
 ## 训练
 ### 第一步：使用空格对语料库中的所有句子进行拆分
 
-首先, 我们需要一个训练语料库，使用 **空格进行分词**，在 subword-nmt 中实现的代码如下：
-``` python
+首先, 我们需要准备一个训练语料库，使用 **空格进行分词**，在 subword-nmt 中实现的代码如下：
+``` py title="第一步: 使用空格对语料库中的所有句子进行拆分"
 # 统计语料库中所有单词出现的频数
 for i, line in enumerate(fobj):
     # 使用空格分割
@@ -50,14 +50,17 @@ for i, line in enumerate(fobj):
 
 在 subword-nmt 中实现的代码如下：
 
-``` python
+``` python title="第二步：将 word 以字符为单位进行拆分"
+# 将单词拆分成字符，并添加 </w> 标记
 vocab = dict([(tuple(x[:-1]) + (x[-1] + '</w>',) ,y) for (x, y) in vocab.items()])
 ```
 
 ### 第三步：根据字符的频数进行降序排序
 
-获取字符的频率之后，根据字符的序列进行降序排序，得到字符的排序序列。
-``` python
+获取字符的频率之后，根据字符的序列进行降序排序，得到字符的排序序列，利于后续的合并。
+
+``` python title="第三步：根据字符的频数进行降序排序"
+
 sorted_vocab = sorted(vocab.items(), key=lambda x: x[1], reverse=True)
 ```
 
@@ -66,7 +69,7 @@ sorted_vocab = sorted(vocab.items(), key=lambda x: x[1], reverse=True)
 
 在训练语料的所有单词中，统计所有单词中bi-gram的频数，具体的实现代码如下：
 
-``` python
+``` python title="第四步：统计所有单词中bi-gram的频数"
 def get_pair_statistics(vocab):
     """Count frequency of all symbol pairs, and create index"""
 
@@ -89,7 +92,7 @@ def get_pair_statistics(vocab):
 ### 第五步：合并频率最高的bi-gram
 
 在第 4 步中，统计了所有单词中bi-gram的频数，然后根据频率进行降序排序，取出频率最高的bi-gram，合并成新的字符，将训练语料中所有出现该bi-gram都进行合并：
-``` python
+``` python title="第五步：合并频率最高的bi-gram"
 def replace_pair(pair, vocab, indices):
     """
     将出现的所有的('A', 'B')替换成'AB'。
@@ -136,7 +139,7 @@ def replace_pair(pair, vocab, indices):
 
 在第五步中，将所有的bi-gram都合并成新的字符，那么就需要重新计算每个字符的频率，计算的代码如下所示：
 
-``` python
+``` python title="第六步：重新计算bi-gram的频率"
 def update_pair_statistics(pair, changed, stats, indices):
     """
     更新符号对的索引和频率
@@ -226,7 +229,7 @@ def update_pair_statistics(pair, changed, stats, indices):
 ### 第七步：剪枝
 
 在词典中去掉不符合要求的词，比如频率过低的词，实现的代码如下：
-```python
+```python title="剪枝"
 def prune_stats(stats, big_stats, threshold):
     """
     根据阈值修剪统计字典，以提高max()操作的效率。
