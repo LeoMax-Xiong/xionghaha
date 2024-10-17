@@ -3,13 +3,18 @@
 
 ONNX 可以比作一种专门用于数学函数的编程语言。它定义了机器学习模型使用该语言(指ONNX)实现模型推理功能所需的所有必要运算或者称为算子。一个线性回归的模型可以用以下方式表示：
 
+!!! 熊哈哈注
+    **ONNX** (大写)表示描述模型的标准
+
+    **onnx** (小写) ONNX 标准的一种python实现方式，是实现 ONNX 的一个 python 包
+
 ``` python
 def onnx_linear_regressor(X):
     "ONNX code for a linear regression"
     return onnx.Add(onnx.MatMul(X, coefficients), bias)
 ```
 
-!!! 注意
+!!! 熊哈哈注
     上面线性回归模型的数学模型如下：
     $$
     y = X * A + B
@@ -17,7 +22,7 @@ def onnx_linear_regressor(X):
 
 这个示例与开发人员用 `Python` 编写的表达式非常相似。它也可以表示为一个计算图，通过计算图逐步展示线性模型如何转换特征，最后获得预测的结果。这就是为什么使用 ONNX 实现的机器学习模型通常被称为 **ONNX 图**的原因。
 
-<div align=center> <img src="./img/onnx_linreg1.png"> </div>
+![线性回归计算图](./img/onnx_linreg1.png)
 
 ONNX 旨在提供一种任何机器学习框架都可以用其来描述模型的通用语言。第一个场景是让开发者在生产环境中部署机器学习模型变得更加容易。可以在部署该模型的环境中，使用专门实现和优化的 ONNX 模型解释器（或运行时库）以完成此任务。借助 ONNX，可以构建一个独特的流程在生产中部署模型，并且部署框架可以独立于用于构建模型的学习框架。 python 的 `onnx` 库实现了一个运行时库，可用于评估 ONNX 模型以及评估 ONNX 算子。 `onnx` 用来在阐明 ONNX 的语义并帮助理解和调试 ONNX 工具和转换器。`onnx` 不适用于生产环境，运行的性能也不是 `onnx` 的目标（参见onnx.reference）。
 
@@ -49,7 +54,8 @@ xac = onnx.Add(xa, c)
 
 从视觉上看，上述的伪代码对应的计算图如下图所示。计算图中的右侧描述了 算子 `Add`，其中第二个输入定义为初始化器。该图是使用此代码初始化器，默认值获得的。
 
-<div align=center> <img src="./img/linreg2.png"> </div>
+<!-- <div align=center> <img src="./img/linreg2.png"> </div> -->
+![线性回归模型计算图优化](./img/linreg2.png)
 
 属性是算子的固定参数。 `Gemm` 算子有四个属性，`alpha`、`beta`、`transA`、`transB`。运行时库一旦加载了 ONNX 图，这些值就无法更改，并且对于所有预测过程都保持不变。
 
@@ -197,14 +203,16 @@ else
 ```
 
 这两个计算图可以使用计算图中已经计算出的任何结果，并且必须产生完全相同数量的输出。这些输出将是条件算子 `If` 的输出。
-<img src="./img/dot_if.png">
+<!-- <img src="./img/dot_if.png"> -->
+![条件算子](./img/dot_if.png)
 
 
 # 扫描算子 Scan
 
 `Scan` 算子实现了具有固定迭代次数的循环。它循环遍历输入的行（或任何其他维度）并沿同一数据轴连接输出。让我们看一个实现成对距离 $M(i, j) = \|X_{i} - X_{j} \|^{2}$的示例：
 
-<img src="./img/dot_scan.png">
+<!-- <img src="./img/dot_scan.png"> -->
+![扫描算子](./img/dot_scan.png)
 
 即使此循环比成对距离的自定义实现慢，但它仍然很高效。它假设输入和输出都是张量，并自动将每次迭代的输出连接成单个张量。上一个示例只有一个，但可以有多个。
 
@@ -240,7 +248,8 @@ ONNX 包在大多数情况下可以在知道每个标准运算符的输入形状
 # 工具
 netron 非常有助于可视化 ONNX 计算图。这是唯一一款无需编程的工具。第一个屏幕截图就是用这个工具制作的。
 
-<img src="./img/linreg1.png">
+<!-- <img src="./img/linreg1.png"> -->
+![线性回归模型](./img/linreg1.png)
 
 onnx2py.py 从 ONNX 计算图创建一个 python 文件。此脚本可以创建相同的计算图。用户可以修改它来更改计算图。
 
