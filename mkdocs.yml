@@ -106,7 +106,7 @@ nav:
   - onnx:
     - introduction: 
       - ONNX: "./onnx/introduction.md"
-      - ONNX与Python: "./onnx/onnx_with_python.md"
+      - Python处理ONNX: "./onnx/onnx_with_python.md"
   - inference:
     - introduction: "./inference/introduction.md"
   - speech_and_language_processing:
