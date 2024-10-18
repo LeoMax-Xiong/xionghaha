@@ -105,7 +105,8 @@ nav:
     - introduction: "./rewrite/introduction.md"
   - onnx:
     - introduction: 
-      - ONNX概念: "./onnx/introduction.md"
+      - ONNX: "./onnx/introduction.md"
+      - ONNX与Python: "./onnx/onnx_with_python.md"
   - inference:
     - introduction: "./inference/introduction.md"
   - speech_and_language_processing:
@@ -129,6 +130,9 @@ markdown_extensions:
   - admonition
   - attr_list
   - md_in_html
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.details
 
 extra_javascript:
   - https://polyfill.io/v3/polyfill.min.js?features=es6
