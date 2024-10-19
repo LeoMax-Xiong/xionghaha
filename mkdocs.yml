@@ -107,6 +107,8 @@ nav:
     - introduction: 
       - ONNX: "./onnx/introduction.md"
       - Python处理ONNX: "./onnx/onnx_with_python.md"
+      - API接口:
+        - proto定义: "./onnx/api_proto.md"
   - inference:
     - introduction: "./inference/introduction.md"
   - speech_and_language_processing:
