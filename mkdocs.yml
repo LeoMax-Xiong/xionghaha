@@ -116,6 +116,9 @@ nav:
       - jsgf: "./speech_and_language_processing/jsgf/jsgf.md"
       # - blogs:
       #   - "基础": blog/blogs/basic.md
+  - RAG:
+    - 回复生成:
+      - 问题: "./rag/generation/question.md"
   - todo:
     - todo: "./todo/todo.md"
 
@@ -135,6 +138,8 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.details
+  - tables
+  - markdown_grid_tables
 
 extra_javascript:
   - https://polyfill.io/v3/polyfill.min.js?features=es6

@@ -7,8 +7,35 @@
 ## 背景
 这些结构在onnx中使用 protobuf 协议定义，在 onnx/*.proto 文件中。建议使用`onnx.helper` 模块中的函数来创建它们，而不是直接实例化它们。每个结构都可以用函数打印print并呈现为 json 字符串。
 
+当我们加载了一个ONNX 模型之后，我们获得的就是一个 `ModelProto`，它包含了一些版本信息，生产者信息和一个 `GraphProto`。在 `GraphProto`里面又包含了四个repeated数组，它们分别是 `node`(`NodeProto`类型)，`input`(`ValueInfoProto`类型)，`output`(`ValueInfoProto`类型)和`initializer`(`TensorProto`类型)，其中 
+
+* `node` 中存放了模型中所有的计算节点，
+* `input` 存放了模型的输入节点，
+* `output` 存放了模型中所有的输出节点，
+* `initializer` 存放了模型的所有权重参数。
+
 onnx文件的结构如下图所示：
+
 ![onnx中ModelProto结构](./img/onnx_model_structure.png)
+
+
+## ModelProto
+
+`ModelProto` 这个类这定义了一个ONNX模型。这是每个转换库在转换机器学习模型后返回的类型。`ModelProto` 是一种顶层文件/容器格式，用于构建 ML 模型并将其计算图与元数据关联起来。模型的语义由关联的 `GraphProto` 描述。
+
+| 属性 | 类型 | 含义|
+|-----| -----| -----|
+| doc_string | onnx.ModelProto.doc_string||
+| domain| onnx.ModelProto.domain||
+| functions |onnx.ModelProto.functions||
+| graph| onnx.ModelProto.graph||
+|ir_version| onnx.ModelProto.ir_version||
+|metadata_props| onnx.ModelProto.metadata_props||
+|model_version|onnx.ModelProto.model_version||
+|opset_import|onnx.ModelProto.opset_import||
+|producer_name | onnx.ModelProto.producer_name||
+|producer_version |onnx.ModelProto. Producer_version ||
+|training_info|onnx.ModelProto.training_info||
 
 ## AttributeProto
 
@@ -88,23 +115,6 @@ onnx文件的结构如下图所示：
 | string_keys | onnx.MapProto.string_keys||
 | values |onnx.MapProto.values||
 
-## ModelProto
-这定义了一个模型。这是每个转换库在转换机器学习模型后返回的类型。ModelProto 是一种顶级文件/容器格式，用于捆绑 ML 模型并将其计算图与元数据关联起来。模型的语义由关联的 GraphProto 描述。
-
-| 属性 | 类型 | 含义|
-|-----| -----| -----|
-|DESCRIPTOR | <google.protobuf.pyext._message.MessageDescriptor>||
-| doc_string | onnx.ModelProto.doc_string||
-| domain| onnx.ModelProto.domain||
-| functions |onnx.ModelProto.functions||
-| graph| onnx.ModelProto.graph||
-|ir_version| onnx.ModelProto.ir_version||
-|metadata_props| onnx.ModelProto.metadata_props||
-|model_version|onnx.ModelProto.model_version||
-|opset_import|onnx.ModelProto.opset_import||
-|producer_name | onnx.ModelProto.producer_name||
-|producer_version |onnx.ModelProto. Producer_version ||
-|training_info|onnx.ModelProto.training_info||
 
 ## NodeProto
 
@@ -175,3 +185,5 @@ OperatorSetProto 表示一组不可变的不可变算子规范。该集合的域
 2. https://www.cnblogs.com/silence-cho/p/17673812.html
 3. https://github.com/open-mmlab/mmdeploy/blob/main/docs/zh_cn/tutorial/05_onnx_model_editing.md
 4. https://www.cnblogs.com/vh-pg/p/11736174.html
+5. https://tvm-book.readthedocs.io/zh/latest/tutorials/frontend/onnxscript/square-loss.html
+6. https://blog.csdn.net/zt1091574181/article/details/126299266
