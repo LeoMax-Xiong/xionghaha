@@ -454,6 +454,35 @@
   
     
     
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../rag/generation/question/" class="md-tabs__link">
+          
+  
+    
+  
+  RAG
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
       <li class="md-tabs__item">
         <a href="../../todo/todo/" class="md-tabs__link">
           
@@ -1501,6 +1530,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#modelproto" class="md-nav__link">
+    <span class="md-ellipsis">
+      ModelProto
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#attributeproto" class="md-nav__link">
     <span class="md-ellipsis">
       AttributeProto
@@ -1531,15 +1569,6 @@
   <a href="#mapproto" class="md-nav__link">
     <span class="md-ellipsis">
       MapProto
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#modelproto" class="md-nav__link">
-    <span class="md-ellipsis">
-      ModelProto
     </span>
   </a>
   
@@ -1840,7 +1869,7 @@
             
   
   <span class="md-ellipsis">
-    待办
+    RAG
   </span>
   
 
@@ -1849,6 +1878,130 @@
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            RAG
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_10_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_1" id="__nav_10_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    回复生成
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_1">
+            <span class="md-nav__icon md-icon"></span>
+            回复生成
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rag/generation/question/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    问题
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    待办
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
             <span class="md-nav__icon md-icon"></span>
             待办
           </label>
@@ -1918,6 +2071,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#modelproto" class="md-nav__link">
+    <span class="md-ellipsis">
+      ModelProto
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#attributeproto" class="md-nav__link">
     <span class="md-ellipsis">
       AttributeProto
@@ -1948,15 +2110,6 @@
   <a href="#mapproto" class="md-nav__link">
     <span class="md-ellipsis">
       MapProto
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#modelproto" class="md-nav__link">
-    <span class="md-ellipsis">
-      ModelProto
     </span>
   </a>
   
@@ -2045,8 +2198,83 @@
 </blockquote>
 <h2 id="_1">背景</h2>
 <p>这些结构在onnx中使用 protobuf 协议定义，在 onnx/*.proto 文件中。建议使用<code>onnx.helper</code> 模块中的函数来创建它们，而不是直接实例化它们。每个结构都可以用函数打印print并呈现为 json 字符串。</p>
-<p>onnx文件的结构如下图所示：
-<img alt="onnx中ModelProto结构" src="../img/onnx_model_structure.png" /></p>
+<p>当我们加载了一个ONNX 模型之后，我们获得的就是一个 <code>ModelProto</code>，它包含了一些版本信息，生产者信息和一个 <code>GraphProto</code>。在 <code>GraphProto</code>里面又包含了四个repeated数组，它们分别是 <code>node</code>(<code>NodeProto</code>类型)，<code>input</code>(<code>ValueInfoProto</code>类型)，<code>output</code>(<code>ValueInfoProto</code>类型)和<code>initializer</code>(<code>TensorProto</code>类型)，其中 </p>
+<ul>
+<li><code>node</code> 中存放了模型中所有的计算节点，</li>
+<li><code>input</code> 存放了模型的输入节点，</li>
+<li><code>output</code> 存放了模型中所有的输出节点，</li>
+<li><code>initializer</code> 存放了模型的所有权重参数。</li>
+</ul>
+<p>onnx文件的结构如下图所示：</p>
+<p><img alt="onnx中ModelProto结构" src="../img/onnx_model_structure.png" /></p>
+<h2 id="modelproto">ModelProto</h2>
+<p><code>ModelProto</code> 这个类这定义了一个ONNX模型。这是每个转换库在转换机器学习模型后返回的类型。<code>ModelProto</code> 是一种顶层文件/容器格式，用于构建 ML 模型并将其计算图与元数据关联起来。模型的语义由关联的 <code>GraphProto</code> 描述。</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>类型</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>doc_string</td>
+<td>onnx.ModelProto.doc_string</td>
+<td></td>
+</tr>
+<tr>
+<td>domain</td>
+<td>onnx.ModelProto.domain</td>
+<td></td>
+</tr>
+<tr>
+<td>functions</td>
+<td>onnx.ModelProto.functions</td>
+<td></td>
+</tr>
+<tr>
+<td>graph</td>
+<td>onnx.ModelProto.graph</td>
+<td></td>
+</tr>
+<tr>
+<td>ir_version</td>
+<td>onnx.ModelProto.ir_version</td>
+<td></td>
+</tr>
+<tr>
+<td>metadata_props</td>
+<td>onnx.ModelProto.metadata_props</td>
+<td></td>
+</tr>
+<tr>
+<td>model_version</td>
+<td>onnx.ModelProto.model_version</td>
+<td></td>
+</tr>
+<tr>
+<td>opset_import</td>
+<td>onnx.ModelProto.opset_import</td>
+<td></td>
+</tr>
+<tr>
+<td>producer_name</td>
+<td>onnx.ModelProto.producer_name</td>
+<td></td>
+</tr>
+<tr>
+<td>producer_version</td>
+<td>onnx.ModelProto. Producer_version</td>
+<td></td>
+</tr>
+<tr>
+<td>training_info</td>
+<td>onnx.ModelProto.training_info</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <h2 id="attributeproto">AttributeProto</h2>
 <p>这个类用于定义由 NodeProto 自身定义的算子属性。它是一个命名属性，包含单个浮点数、整数、字符串、图和张量值，或重复的浮点数、整数、字符串、图和张量值。<code>AttributeProto</code> 必须包含 <strong>名称</strong> 字段，并且只能包含以下内容字段之一，从而有效地强制执行 C/C++ 联合等效项。</p>
 <table>
@@ -2344,79 +2572,6 @@
 </tr>
 </tbody>
 </table>
-<h2 id="modelproto">ModelProto</h2>
-<p>这定义了一个模型。这是每个转换库在转换机器学习模型后返回的类型。ModelProto 是一种顶级文件/容器格式，用于捆绑 ML 模型并将其计算图与元数据关联起来。模型的语义由关联的 GraphProto 描述。</p>
-<table>
-<thead>
-<tr>
-<th>属性</th>
-<th>类型</th>
-<th>含义</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>DESCRIPTOR</td>
-<td><google.protobuf.pyext._message.MessageDescriptor></td>
-<td></td>
-</tr>
-<tr>
-<td>doc_string</td>
-<td>onnx.ModelProto.doc_string</td>
-<td></td>
-</tr>
-<tr>
-<td>domain</td>
-<td>onnx.ModelProto.domain</td>
-<td></td>
-</tr>
-<tr>
-<td>functions</td>
-<td>onnx.ModelProto.functions</td>
-<td></td>
-</tr>
-<tr>
-<td>graph</td>
-<td>onnx.ModelProto.graph</td>
-<td></td>
-</tr>
-<tr>
-<td>ir_version</td>
-<td>onnx.ModelProto.ir_version</td>
-<td></td>
-</tr>
-<tr>
-<td>metadata_props</td>
-<td>onnx.ModelProto.metadata_props</td>
-<td></td>
-</tr>
-<tr>
-<td>model_version</td>
-<td>onnx.ModelProto.model_version</td>
-<td></td>
-</tr>
-<tr>
-<td>opset_import</td>
-<td>onnx.ModelProto.opset_import</td>
-<td></td>
-</tr>
-<tr>
-<td>producer_name</td>
-<td>onnx.ModelProto.producer_name</td>
-<td></td>
-</tr>
-<tr>
-<td>producer_version</td>
-<td>onnx.ModelProto. Producer_version</td>
-<td></td>
-</tr>
-<tr>
-<td>training_info</td>
-<td>onnx.ModelProto.training_info</td>
-<td></td>
-</tr>
-</tbody>
-</table>
 <h2 id="nodeproto">NodeProto</h2>
 <p>这定义了一个算子。模型是数学函数的组合，每个函数都表示为 onnx 算子，存储在 NodeProto 中。计算图由节点的 DAG 组成，这些节点表示机器学习框架中通常称为层或管道阶段的内容。例如，它可以是Conv类型的节点，它接收图像、过滤器张量和偏差张量，并产生卷积输出。</p>
 <table>
@@ -2618,6 +2773,8 @@
 <li>https://www.cnblogs.com/silence-cho/p/17673812.html</li>
 <li>https://github.com/open-mmlab/mmdeploy/blob/main/docs/zh_cn/tutorial/05_onnx_model_editing.md</li>
 <li>https://www.cnblogs.com/vh-pg/p/11736174.html</li>
+<li>https://tvm-book.readthedocs.io/zh/latest/tutorials/frontend/onnxscript/square-loss.html</li>
+<li>https://blog.csdn.net/zt1091574181/article/details/126299266</li>
 </ol>
 
 
