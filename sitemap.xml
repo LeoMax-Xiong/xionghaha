@@ -99,6 +99,13 @@
         <xhtml:link rel="alternate" hreflang="en" href="Noneen/rag/generation/question/"/>
     </url>
     <url>
+        <loc>Nonerag/llama_index/learn/%E6%9E%84%E5%BB%BARAG%E7%9A%84%E6%B5%81%E7%A8%8B/LlamaIndex%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83/</loc>
+        <lastmod>2024-11-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="Nonerag/llama_index/learn/%E6%9E%84%E5%BB%BARAG%E7%9A%84%E6%B5%81%E7%A8%8B/LlamaIndex%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/rag/llama_index/learn/%E6%9E%84%E5%BB%BARAG%E7%9A%84%E6%B5%81%E7%A8%8B/LlamaIndex%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83/"/>
+    </url>
+    <url>
         <loc>Nonerag/llama_index/learn/%E6%9E%84%E5%BB%BARAG%E7%9A%84%E6%B5%81%E7%A8%8B/%E5%8A%A0%E8%BD%BD%E5%92%8C%E6%8F%90%E5%8F%96%E6%95%B0%E6%8D%AE/</loc>
         <lastmod>2024-11-03</lastmod>
         <changefreq>daily</changefreq>
@@ -279,6 +286,13 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="Noneen/rag/generation/question/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="Nonerag/generation/question/"/>
+    </url>
+    <url>
+        <loc>Noneen/rag/llama_index/learn/%E6%9E%84%E5%BB%BARAG%E7%9A%84%E6%B5%81%E7%A8%8B/LlamaIndex%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83/</loc>
+        <lastmod>2024-11-03</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="Noneen/rag/llama_index/learn/%E6%9E%84%E5%BB%BARAG%E7%9A%84%E6%B5%81%E7%A8%8B/LlamaIndex%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="Nonerag/llama_index/learn/%E6%9E%84%E5%BB%BARAG%E7%9A%84%E6%B5%81%E7%A8%8B/LlamaIndex%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83/"/>
     </url>
     <url>
         <loc>Noneen/rag/llama_index/learn/%E6%9E%84%E5%BB%BARAG%E7%9A%84%E6%B5%81%E7%A8%8B/%E5%8A%A0%E8%BD%BD%E5%92%8C%E6%8F%90%E5%8F%96%E6%95%B0%E6%8D%AE/</loc>
