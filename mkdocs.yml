@@ -123,6 +123,7 @@ nav:
       - 学习:
         - 加载和提取:
           - 加载数据(提取): "./rag/llama_index/learn/构建RAG的流程/加载和提取数据.md"
+          - LlamaHub注册中心: "./rag/llama_index/learn/构建RAG的流程/LlamaIndex注册中心.md"
   - todo:
     - todo: "./todo/todo.md"
 
