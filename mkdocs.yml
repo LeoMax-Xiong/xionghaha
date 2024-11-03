@@ -119,6 +119,10 @@ nav:
   - RAG:
     - 回复生成:
       - 问题: "./rag/generation/question.md"
+    - llama-index:
+      - 学习:
+        - 加载和提取:
+          - 加载数据(提取): "./rag/llama_index/learn/构建RAG的流程/加载和提取数据.md"
   - todo:
     - todo: "./todo/todo.md"
 
