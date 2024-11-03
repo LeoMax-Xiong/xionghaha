@@ -124,6 +124,13 @@ nav:
         - 加载和提取:
           - 加载数据(提取): "./rag/llama_index/learn/构建RAG的流程/加载和提取数据.md"
           - LlamaHub注册中心: "./rag/llama_index/learn/构建RAG的流程/LlamaIndex注册中心.md"
+      - 组件指南:
+        - 文件加载: 
+          - 引言: "./rag/llama_index/components_guides/文件加载/引言.md"
+          - 文档和节点:
+            - 引言: "./rag/llama_index/components_guides/文件加载/文档和节点/引言.md"
+            - 节点使用: "./rag/llama_index/components_guides/文件加载/文档和节点/节点使用.md"
+            - 元数据提取: "./rag/llama_index/components_guides/文件加载/文档和节点/元数据提取.md"
   - todo:
     - todo: "./todo/todo.md"
 
