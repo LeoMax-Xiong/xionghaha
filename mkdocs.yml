@@ -131,6 +131,8 @@ nav:
             - 引言: "./rag/llama_index/components_guides/文件加载/文档和节点/引言.md"
             - 节点使用: "./rag/llama_index/components_guides/文件加载/文档和节点/节点使用.md"
             - 元数据提取: "./rag/llama_index/components_guides/文件加载/文档和节点/元数据提取.md"
+          - 节点解析文本解析:
+            - 节点解析使用模式: "./rag/llama_index/components_guides/节点解析文档切分/节点解析模块.md"
   - todo:
     - todo: "./todo/todo.md"
 
