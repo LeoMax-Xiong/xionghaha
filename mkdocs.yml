@@ -111,6 +111,9 @@ nav:
       - proto定义: "./onnx/api_proto.md"
   - inference:
     - introduction: "./inference/introduction.md"
+    - vllm: 
+      - 开始: 
+        - 安装: "./inference/vllm/getting_started/安装.md"
   - speech_and_language_processing:
     - 正则表达式文本规整与编辑距离: 
       - jsgf: "./speech_and_language_processing/jsgf/jsgf.md"
