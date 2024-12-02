@@ -1512,6 +1512,8 @@
       
         
       
+        
+      
     
     
       
@@ -1561,6 +1563,131 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_2" id="__nav_8_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    vllm
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_2">
+            <span class="md-nav__icon md-icon"></span>
+            vllm
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_8_2_1" id="__nav_8_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    开始
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            开始
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../../../inference/vllm/getting_started/%E5%AE%89%E8%A3%85/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    安装
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -2347,6 +2474,8 @@
       
         
       
+        
+      
     
     
       
@@ -2434,6 +2563,27 @@
   
   <span class="md-ellipsis">
     向量索引
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../%E7%B4%A2%E5%BC%95/%E5%B1%9E%E6%80%A7%E5%9B%BE%E7%B4%A2%E5%BC%95/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    属性图索引
   </span>
   
 
@@ -2927,23 +3077,24 @@
   <h1>引言</h1>
 
 <h2 id="_1">结构化输出</h2>
-<p>LLM 生成结构化输出的能力对于依赖可靠解析输出值的下游应用程序非常重要。LlamaIndex 本身也以以下方式依赖结构化输出。</p>
+<p>LLM 生成结构化输出的能力对下游应用程序非常重要，下游的应用程序在执行的过程中依赖可靠解析输出的结构化内容。LlamaIndex 本身也以以下方式依赖结构化输出。</p>
 <ul>
 <li>文档检索：LlamaIndex 中的许多数据结构都依赖于具有特定架构的 LLM 调用来进行文档检索。例如，树索引要求 LLM 调用采用“ANSWER: (number)”格式。</li>
 <li>响应合成：用户可能期望最终响应包含一定程度的结构（例如 JSON 输出、格式化的 SQL 查询等）</li>
 </ul>
-<p>LlamaIndex 提供各种模块，使 LLM 能够以结构化格式生成输出。默认情况下，我们的 LLM 类提供结构化输出。我们还提供较低级别的模块：</p>
+<p>LlamaIndex 提供各种模块，使 LLM 能够以结构化的格式生成输出内容。默认情况下，我们的 LLM 类提供结构化输出。我们还提供较低级别的模块：</p>
 <ul>
-<li>Pydantic 程序：这些是通用模块，将输入提示映射到结构化输出，由 Pydantic 对象表示。它们可以使用函数调用 API 或文本完成 API + 输出解析器。它们也可以与查询引擎集成。</li>
-<li>预定义的 Pydantic 程序：我们有预定义的 Pydantic 程序，将输入映射到特定的输出类型（如数据框）。</li>
+<li><code>Pydantic</code> 程序：这些是通用模块，将输入提示 prompt 映射到结构化输出，由 <code>Pydantic</code> 对象表示。它们可以使用函数调用 API 或文本补全 API + 输出解析器这种形式。它们也可以与查询引擎集成。</li>
+<li>预定义的 <code>Pydantic</code> 程序：我们有预定义的 <code>Pydantic</code> 程序，将输入映射到特定的输出类型（如数据框）。</li>
 <li>输出解析器：这些模块在 LLM 文本完成端点之前和之后运行。它们不与 LLM 函数调用端点一起使用（因为它们包含开箱即用的结构化输出）。
 请参阅以下部分以了解输出解析器和 Pydantic 程序的概述。</li>
 </ul>
 <h2 id="_2">结构化输出函数的剖析</h2>
 <p>这里我们描述了 LLM 支持的结构化输出函数的不同组件。管道取决于您使用的是通用 LLM 文本完成 API还是LLM 函数调用 API。</p>
-<p><img alt="" src="../../../../../../../rag/llama_index/components_guides/%E6%9F%A5%E8%AF%A2/%E7%BB%93%E6%9E%84%E5%8C%96%E8%BE%93%E5%87%BA/img/diagram1.png" />
-<img alt="" src="../../../../../../../rag/llama_index/components_guides/%E6%9F%A5%E8%AF%A2/%E7%BB%93%E6%9E%84%E5%8C%96%E8%BE%93%E5%87%BA/img/diagram1_2.png" /></p>
-<p>使用通用完成 API，输入和输出由文本提示处理。输出解析器在 LLM 调用之前和之后发挥作用，确保输出结构化。在 LLM 调用之前，输出解析器可以将格式指令附加到提示。在 LLM 调用之后，输出解析器可以将输出解析为指定的指令。</p>
+<p><img alt="" src="../../../../../../../rag/llama_index/components_guides/%E6%9F%A5%E8%AF%A2/%E7%BB%93%E6%9E%84%E5%8C%96%E8%BE%93%E5%87%BA/img/diagram1.png" /></p>
+<!-- ![](./img/diagram1_2.png) -->
+
+<p>与补全的API一起，输入和输出由文本提示处理。输出解析器在 LLM 调用之前和之后发挥作用，确保输出结构化。在 LLM 调用之前，输出解析器可以将格式指令附加到提示。在 LLM 调用之后，输出解析器可以将输出解析为指定的指令。</p>
 <p>使用函数调用 API，输出本质上是结构化的格式，输入可以采用所需对象的签名。结构化输出只需转换为正确的对象格式（例如 Pydantic）。</p>
 <h2 id="_3">入门指南</h2>
 <p>结构化输出简单指南</p>
