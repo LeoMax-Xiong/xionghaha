@@ -142,6 +142,7 @@ nav:
           - 向量索引: "./rag/llama_index/components_guides/索引/向量索引.md"
           - 属性图索引: "./rag/llama_index/components_guides/索引/属性图索引.md"
           - 文档管理: "./rag/llama_index/components_guides/索引/文档管理.md"
+          - 元数据提取: "./rag/llama_index/components_guides/索引/元数据提取.md"
         - 查询:
           - 引言: "./rag/llama_index/components_guides/查询/引言.md"
           - 结构化输出: 
