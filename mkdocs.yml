@@ -151,9 +151,18 @@ nav:
             - 引言: "./rag/llama_index/components_guides/查询/结构化输出/引言.md"
             - 响应合成: "./rag/llama_index/components_guides/查询/结构化输出/响应合成.md"
             - 结构化输出简单指南: "./rag/llama_index/components_guides/查询/结构化输出/结构化输出的简单指南.md"
+  
+  - huggingface:
+    - datasets:
+      - DatasetDict类: "./huggingface/datasets/DatasetDict类.md"
+
   - speech:
     - asr:
       - 引言: "./speech/asr/引言.md"
+
+  - 论文翻译:
+    - 大模型预训练数据集:
+      - RedPajama an Open Dataset for Training Large Language Models: "论文翻译/大模型预训练数据集/redpajama/RedPajama_an_Open_Dataset_for_Training_Large_Language_Models.md"
   - todo:
     - todo: "./todo/todo.md"
 
