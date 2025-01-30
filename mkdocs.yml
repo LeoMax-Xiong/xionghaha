@@ -163,6 +163,8 @@ nav:
   - 论文翻译:
     - 大模型预训练数据集:
       - RedPajama an Open Dataset for Training Large Language Models: "论文翻译/大模型预训练数据集/redpajama/RedPajama_an_Open_Dataset_for_Training_Large_Language_Models.md"
+    - 大模型:
+      - DeepSeek LLM Scaling Open-Source Language Models with Longtermism: "论文翻译/大模型/deepseekllm/DeepSeek_LLM_Scaling_Open_Source_Language_Models_with_Longtermism.md"
   - todo:
     - todo: "./todo/todo.md"
 
