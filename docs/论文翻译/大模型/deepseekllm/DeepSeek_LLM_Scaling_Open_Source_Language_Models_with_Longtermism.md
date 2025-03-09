@@ -55,7 +55,7 @@ DeepSeek LLM的初始化标准偏差为0.006，并使用AdamW优化器进行训�
 
 ### 2.4. 基础设施
 
-我们使用名为HAI-LLM（High flyer，2023）的高效轻量级训练框架来训练和评估大型语言模型。数据并行性、张量并行性、序列并行性和1F1B流水线并行性被集成到这个框架中，就像在Megatron中所做的那样（Korthikanti等人，2023；Narayanan等人，2021；Shoeybi等人，2019）。我们还利用flash注意力（Dao，2023；Dao等人，2022）技术来提高硬件利用率。ZeRO-1（Rajbhandari等人，2020）被用来在数据并行列上划分优化器状态。还努力重叠计算和通信，以尽量减少额外的等待开销，包括ZeRO-1中最后一个微批处理的反向过程和减少分散操作，以及GEMM计算和顺序并行的所有收集/减少分散。一些层/操作符被融合以加快训练速度，包括LayerNorm、GEMM（只要可能）和Adam更新。为了提高模型训练的稳定性，我们以bf16精度训练模型，但以fp32精度累积梯度。执行原地交叉熵以减少GPU内存消耗，即：我们在交叉熵CUDA内核中将bf16 logits动态转换为fp32精度（而不是在HBM中预先转换），计算相应的bf16梯度，并用其梯度覆盖logits。¬¬
+我们使用名为HAI-LLM（High flyer，2023）的高效轻量级训练框架来训练和评估大型语言模型。数据并行性、张量并行性、序列并行性和1F1B流水线并行性被集成到这个框架中，就像在Megatron中所做的那样（Korthikanti等人，2023；Narayanan等人，2021；Shoeybi等人，2019）。我们还利用flash注意力（Dao，2023；Dao等人，2022）技术来提高硬件利用率。ZeRO-1（Rajbhandari等人，2020）被用来在数据并行列上划分优化器状态。还努力重叠计算和通信，以尽量减少额外的等待开销，包括ZeRO-1中最后一个微批处理的反向过程和减少分散操作，以及GEMM计算和顺序并行的所有收集/减少分散。一些层/操作符被融合以加快训练速度，包括LayerNorm、GEMM（只要可能）和Adam更新。为了提高模型训练的稳定性，我们以bf16精度训练模型，但以fp32精度累积梯度。执行原地交叉熵以减少GPU内存消耗，即：我们在交叉熵CUDA内核中将bf16 logits动态转换为fp32精度（而不是在HBM中预先转换），计算相应的bf16梯度，并用其梯度覆盖logits。
 模型权重和优化器状态每5分钟异步保存一次，这意味着在偶尔出现硬件或网络故障的最坏情况下，我们将损失不超过5分钟的训练时间。这些临时模型检查点会定期清理，以避免
  
 消耗了太多的存储空间。我们还支持从不同的3D并行配置恢复训练，以应对计算集群负载的动态变化。
@@ -395,8 +395,9 @@ DeepSeek LLM是一个致力于推进开源语言模型的长期项目。
 
 * Anthropic. Introducing Claude, 2023. [URL https://www.anthropic.com/index/introd ucing-claude.](https://www.anthropic.com/news/introducing-claude)
 
-* J. Austin, A. Odena, M. Nye, M. Bosma, H. Michalewski, D. Dohan, E. Jiang, C. Cai, M. Terry, Q. Le, et al. Program synthesis with large language models. arXiv preprint arXiv:2108.07732, 2021.
+* J. Austin, A. Odena, M. Nye, M. Bosma, H. Michalewski, D. Dohan, E. Jiang, C. Cai, M. Terry, Q. Le, et al. Program synthesis with large language models. arXiv preprint [arXiv:2108.07732](https://arxiv.org/pdf/2302.13971), 2021.
 
+* H. Touvron, T. Lavril, G. Izacard, X. Martinet, M.-A. Lachaux, T. Lacroix, B. Rozière, N. Goyal, E. Hambro, F. Azhar, et al. LLaMA: Open and efficient foundation language models. arXiv preprint arXiv:2302.13971, 2023a.
 Q.Le等，大型语言模型的程序综合。arXiv预印本arXiv：2108.077322021。
 白，白，朱，崔，党，邓，范，葛，韩，黄，等。Qwen技术报告。arXiv预印本arXiv:2309.16609，2023。
 Y.Bisk、R.Zellers、R.L.Bras、J.Gao和Y.Choi。PIQA：自然语言中关于物理常识的推理。第三十四届AAAI人工智能大会
